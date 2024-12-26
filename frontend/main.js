@@ -11,7 +11,9 @@ function createWindow () {
     }
   })
 
+  // React uygulamasını yükle
   win.loadFile('index.html')
+  
   // Geliştirme aşamasında DevTools'u aç
   win.webContents.openDevTools()
 }

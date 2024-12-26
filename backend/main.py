@@ -5,8 +5,8 @@ import cv2
 import pydicom
 from PIL import Image
 import io
-import torch
-from pathlib import Path
+import os
+from brain_tumor_detector import BrainTumorDetector
 
 app = FastAPI(title="Tıbbi Görüntü Analiz API")
 
@@ -19,32 +19,51 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Model örneğini oluştur
+brain_tumor_detector = BrainTumorDetector()
+
 @app.get("/")
 async def root():
     return {"message": "Tıbbi Görüntü Analiz API'sine Hoş Geldiniz"}
 
 @app.post("/analyze/brain-tumor")
 async def analyze_brain_tumor(file: UploadFile = File(...)):
-    # Görüntüyü oku ve işle
-    contents = await file.read()
-    
-    if file.filename.endswith(('.dcm', '.DCM')):
-        # DICOM dosyası işleme
-        dataset = pydicom.dcmread(io.BytesIO(contents))
-        image = dataset.pixel_array
-    else:
-        # Normal görüntü dosyası işleme
-        nparr = np.frombuffer(contents, np.uint8)
-        image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    
-    # TODO: Model tahminini implement et
-    result = {
-        "tumor_detected": False,
-        "confidence": 0.0,
-        "location": None
-    }
-    
-    return result
+    try:
+        # Geçici dosya oluştur
+        temp_path = f"temp_{file.filename}"
+        with open(temp_path, "wb") as buffer:
+            contents = await file.read()
+            buffer.write(contents)
+        
+        # Modele gönder ve tahmin al
+        result = brain_tumor_detector.detect(temp_path)
+        
+        # Geçici dosyayı sil
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+            
+        # Frontend'e uygun formatta yanıt döndür
+        if result["success"]:
+            return {
+                "tumor_detected": result["has_tumor"],
+                "confidence": result["confidence"],
+                "all_probabilities": result["all_probabilities"]
+            }
+        else:
+            return {
+                "error": "Görüntü analizi sırasında bir hata oluştu",
+                "details": result.get("error", "Bilinmeyen hata")
+            }
+            
+    except Exception as e:
+        # Hata durumunda geçici dosyayı temizle
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+            
+        return {
+            "error": "Görüntü analizi sırasında bir hata oluştu",
+            "details": str(e)
+        }
 
 @app.post("/analyze/alzheimer")
 async def analyze_alzheimer(file: UploadFile = File(...)):

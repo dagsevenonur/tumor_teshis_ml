@@ -20,6 +20,7 @@ var/
 .installed.cfg
 *.egg
 venv/
+.venv/
 .env
 
 # Node
@@ -40,11 +41,13 @@ yarn-error.log
 *.swp
 *.swo
 
-# Model dosyaları
+# Model ve veri dosyaları
 models/*.pt
 models/*.pth
 models/*.h5
+datasets/
+temp_*
 
-# Veri dosyaları
-data/
-*.dcm 
+# Sistem dosyaları
+.DS_Store
+Thumbs.db 
