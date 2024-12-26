@@ -15,7 +15,9 @@ function createWindow () {
   win.loadFile('index.html')
   
   // Geliştirme aşamasında DevTools'u aç
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
+  // Menü çubuğunu gizle
+  win.setMenuBarVisibility(false)
 }
 
 app.whenReady().then(() => {
