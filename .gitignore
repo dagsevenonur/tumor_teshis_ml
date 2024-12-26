@@ -42,10 +42,10 @@ yarn-error.log
 *.swo
 
 # Model ve veri dosyaları
-models/*.pt
-models/*.pth
-models/*.h5
-datasets/
+models/*
+!models/.gitkeep
+datasets/*
+!datasets/.gitkeep
 temp_*
 
 # Sistem dosyaları
