@@ -315,7 +315,7 @@ function App() {
     const barData = [
       {
         name: 'Sonuç',
-        Tümör: result.all_probabilities.tumor * 100,
+        Tumor: result.all_probabilities.tumor * 100,
         Normal: result.all_probabilities.no_tumor * 100,
       }
     ];
@@ -386,7 +386,7 @@ function App() {
                   bottom: 5,
                 }}
               >
-                <Bar dataKey="Tüm��r" fill="#ff4444" />
+                <Bar dataKey="Tumor" fill="#ff4444" name="Tümör" />
                 <Bar dataKey="Normal" fill="#4caf50" />
                 <Tooltip formatter={(value) => `${value.toFixed(2)}%`} />
                 <Legend />
