@@ -6,13 +6,14 @@ import numpy as np
 import cv2
 import os
 
-class BrainTumorDetector:
+class AlzheimerDetector:
     def __init__(self):
         self.model = models.resnet50(pretrained=False)
         num_ftrs = self.model.fc.in_features
-        self.model.fc = nn.Linear(num_ftrs, 2)
+        # Alzheimer için 4 sınıf: Normal, Hafif, Orta, Şiddetli
+        self.model.fc = nn.Linear(num_ftrs, 4)
         
-        # Görüntü dönüşüm işlemleri tanımla
+        # Görüntü dönüşüm işlemleri
         self.transform = transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor(),
@@ -21,19 +22,19 @@ class BrainTumorDetector:
         ])
         
         # Model ağırlıklarını yükle
-        model_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models', 'brain_tumor_best.pth')
-        print(f"Model yolu: {model_path}")
+        model_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models', 'alzheimer_best.pth')
+        print(f"Alzheimer model yolu: {model_path}")
         try:
             checkpoint = torch.load(model_path)
             self.model.load_state_dict(checkpoint['model_state_dict'])
-            print("Model başarıyla yüklendi")
+            print("Alzheimer modeli başarıyla yüklendi")
             print(f"Eğitim doğruluğu: {checkpoint['train_acc']:.2f}%")
             print(f"Doğrulama doğruluğu: {checkpoint['val_acc']:.2f}%")
         except Exception as e:
             print(f"Model yüklenirken hata: {str(e)}")
         
         self.model.eval()
-        
+    
     def enhance_image(self, image_array):
         # Görüntüyü BGR'dan RGB'ye dönüştür
         if len(image_array.shape) == 3:
@@ -56,7 +57,7 @@ class BrainTumorDetector:
         
     def detect(self, image_path):
         try:
-            print(f"Görüntü analiz ediliyor: {image_path}")
+            print(f"Alzheimer analizi yapılıyor: {image_path}")
             
             # Görüntüyü yükle
             image = Image.open(image_path).convert('RGB')
@@ -82,24 +83,22 @@ class BrainTumorDetector:
                 # En yüksek olasılıklı sınıfı bul
                 max_prob, predicted_class = torch.max(probabilities, dim=0)
                 
-                # Tümör var mı kontrol et
-                threshold = 0.3  # Eşik değerini düşürdük
-                has_tumor = predicted_class.item() == 1 and max_prob.item() > threshold
+                # Sınıf etiketleri
+                classes = ['Normal', 'Hafif', 'Orta', 'Şiddetli']
+                predicted_label = classes[predicted_class.item()]
                 
                 # Tüm sınıfların olasılıklarını al
                 class_probs = {
-                    "no_tumor": probabilities[0].item(),
-                    "tumor": probabilities[1].item()
+                    classes[i]: probabilities[i].item() 
+                    for i in range(len(classes))
                 }
                 
-                print(f"Tahmin sonucu: Sınıf={predicted_class.item()}, Olasılık={max_prob.item():.4f}")
+                print(f"Tahmin sonucu: {predicted_label}, Olasılık={max_prob.item():.4f}")
             
             return {
-                "has_tumor": has_tumor,
+                "predicted_class": predicted_label,
                 "confidence": max_prob.item(),
                 "all_probabilities": class_probs,
-                "predicted_class": predicted_class.item(),
-                "threshold": threshold,
                 "success": True
             }
             
