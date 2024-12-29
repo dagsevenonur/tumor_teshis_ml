@@ -150,6 +150,7 @@ function App() {
   const [previewUrl, setPreviewUrl] = useState(null);
   const [analyzing, setAnalyzing] = useState(false);
   const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
   const [imageSettings, setImageSettings] = useState({
     brightness: 100,
     contrast: 100,
@@ -165,6 +166,7 @@ function App() {
     setSelectedFile(null);
     setPreviewUrl(null);
     setResult(null);
+    setError(null);
   };
 
   const onDrop = useCallback((acceptedFiles) => {
@@ -173,6 +175,7 @@ function App() {
       setSelectedFile(file);
       setPreviewUrl(URL.createObjectURL(file));
       setResult(null);
+      setError(null);
     }
   }, []);
 
@@ -188,32 +191,45 @@ function App() {
     setSelectedFile(null);
     setPreviewUrl(null);
     setResult(null);
+    setError(null);
   };
 
   const analyzeImage = async () => {
     if (!selectedFile) return;
 
     setAnalyzing(true);
+    setError(null);
+    setResult(null);
+
     const formData = new FormData();
     formData.append('file', selectedFile);
 
-    const endpoints = {
-      0: '/analyze/brain-tumor',
-      1: '/analyze/cancer',
-      2: '/analyze/alzheimer'
-    };
-
     try {
-      const response = await axios.post(`http://localhost:8000${endpoints[selectedTab]}`, formData, {
+      let endpoint = '';
+      if (selectedTab === 0) {
+        endpoint = '/analyze/tumor';
+      } else if (selectedTab === 1) {
+        endpoint = '/analyze/alzheimer';
+      }
+
+      const response = await axios.post(endpoint, formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          'Content-Type': 'multipart/form-data'
         },
+        baseURL: 'http://localhost:8000',
+        timeout: 30000
       });
-      console.log('Backend yanıtı:', response.data);
+
       setResult(response.data);
+      setError(null);
     } catch (error) {
-      console.error('Analiz sırasında hata oluştu:', error);
-      setResult({ error: 'Görüntü analizi sırasında bir hata oluştu.' });
+      console.error('Analiz hatası:', error);
+      if (error.code === 'ECONNREFUSED') {
+        setError('Backend sunucusuna bağlanılamadı. Lütfen sunucunun çalıştığından emin olun.');
+      } else {
+        setError('Görüntü analizi sırasında bir hata oluştu. Lütfen tekrar deneyin.');
+      }
+      setResult(null);
     } finally {
       setAnalyzing(false);
     }
@@ -228,13 +244,7 @@ function App() {
         formats: 'MR görüntüleri (DICOM, JPG, PNG)',
       },
       1: {
-        title: 'Kanser Tespiti',
-        description: 'Histopatolojik görüntülerde kanser tespiti yapar.',
-        icon: <CoronavirusIcon />,
-        formats: 'Mikroskop görüntüleri (JPG, PNG, TIFF)',
-      },
-      2: {
-        title: 'Alzheimer Tespiti',
+        title: 'Alzheimer Risk Analizi',
         description: 'Beyin MR görüntülerinde Alzheimer belirtilerini tespit eder.',
         icon: <PsychologyIcon />,
         formats: 'MR görüntüleri (DICOM, JPG, PNG)',
@@ -307,106 +317,202 @@ function App() {
       return <Typography color="error">{result.error}</Typography>;
     }
 
-    const pieData = [
-      { name: 'Tümör', value: result.all_probabilities.tumor },
-      { name: 'Normal', value: result.all_probabilities.no_tumor }
-    ];
+    if (selectedTab === 0) {
+      // Beyin Tümörü sonuçları
+      const pieData = [
+        { name: 'Tümör', value: result.has_tumor ? result.confidence : 0 },
+        { name: 'Normal', value: result.has_tumor ? 0 : result.confidence }
+      ];
 
-    const barData = [
-      {
-        name: 'Sonuç',
-        Tumor: result.all_probabilities.tumor * 100,
-        Normal: result.all_probabilities.no_tumor * 100,
-      }
-    ];
+      const barData = [
+        {
+          name: 'Sonuç',
+          Tumor: result.has_tumor ? result.confidence * 100 : 0,
+          Normal: result.has_tumor ? 0 : result.confidence * 100,
+        }
+      ];
 
-    const COLORS = ['#ff4444', '#4caf50'];
+      const COLORS = ['#ff4444', '#4caf50'];
 
-    return (
-      <Box ref={resultsRef}>
-        <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <Typography variant="h6" gutterBottom color={result.tumor_detected ? 'error' : 'success'} align="center">
-              {result.tumor_detected ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi'}
-            </Typography>
-            <Typography variant="body1" align="center" sx={{ mb: 3 }}>
-              Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
-            </Typography>
-          </Grid>
-
-          {result.tumor_detected && result.tumor_regions && result.tumor_regions.length > 0 && (
+      return (
+        <Box ref={resultsRef}>
+          <Grid container spacing={3}>
             <Grid item xs={12}>
-              <TumorVisualization 
-                imageUrl={previewUrl}
-                tumorRegions={result.tumor_regions}
-              />
-            </Grid>
-          )}
-
-          <Grid item xs={12} md={6}>
-            <Typography variant="h6" gutterBottom align="center" color="primary">
-              Olasılık Dağılımı
-            </Typography>
-            <ResponsiveContainer width="100%" height={300}>
-              <PieChart>
-                <Pie
-                  data={pieData}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={60}
-                  outerRadius={80}
-                  fill="#8884d8"
-                  paddingAngle={5}
-                  dataKey="value"
-                  label={({ name, value }) => `${name}: ${(value * 100).toFixed(2)}%`}
-                >
-                  {pieData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip 
-                  formatter={(value) => `${(value * 100).toFixed(2)}%`}
-                />
-                <Legend />
-              </PieChart>
-            </ResponsiveContainer>
-          </Grid>
-
-          <Grid item xs={12} md={6}>
-            <Typography variant="h6" gutterBottom align="center" color="primary">
-              Karşılaştırmalı Analiz
-            </Typography>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart
-                data={barData}
-                margin={{
-                  top: 20,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
-                }}
-              >
-                <Bar dataKey="Tumor" fill="#ff4444" name="Tümör" />
-                <Bar dataKey="Normal" fill="#4caf50" />
-                <Tooltip formatter={(value) => `${value.toFixed(2)}%`} />
-                <Legend />
-              </BarChart>
-            </ResponsiveContainer>
-          </Grid>
-
-          <Grid item xs={12}>
-            <Alert severity={result.tumor_detected ? "warning" : "success"} sx={{ mt: 2 }}>
-              <Typography variant="body1">
-                {result.tumor_detected 
-                  ? "Görüntüde tümör belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun."
-                  : "Görüntüde tümör belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
-                }
+              <Typography variant="h6" gutterBottom color={result.has_tumor ? 'error' : 'success'} align="center">
+                {result.has_tumor ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi'}
               </Typography>
-            </Alert>
+              <Typography variant="body1" align="center" sx={{ mb: 3 }}>
+                Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
+              </Typography>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" gutterBottom align="center" color="primary">
+                Olasılık Dağılımı
+              </Typography>
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    paddingAngle={5}
+                    dataKey="value"
+                    label={({ name, value }) => value > 0 ? `${name}: ${(value * 100).toFixed(2)}%` : ''}
+                  >
+                    {pieData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip 
+                    formatter={(value) => value > 0 ? `${(value * 100).toFixed(2)}%` : '0%'}
+                  />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" gutterBottom align="center" color="primary">
+                Karşılaştırmalı Analiz
+              </Typography>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart
+                  data={barData}
+                  margin={{
+                    top: 20,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                  }}
+                >
+                  <Bar dataKey="Tumor" fill="#ff4444" name="Tümör" />
+                  <Bar dataKey="Normal" fill="#4caf50" />
+                  <Tooltip formatter={(value) => value > 0 ? `${value.toFixed(2)}%` : '0%'} />
+                  <Legend />
+                </BarChart>
+              </ResponsiveContainer>
+            </Grid>
+
+            <Grid item xs={12}>
+              <Alert severity={result.has_tumor ? "warning" : "success"} sx={{ mt: 2 }}>
+                <Typography variant="body1">
+                  {result.has_tumor 
+                    ? "Görüntüde tümör belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun."
+                    : "Görüntüde tümör belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
+                  }
+                </Typography>
+              </Alert>
+            </Grid>
           </Grid>
-        </Grid>
-      </Box>
-    );
+        </Box>
+      );
+    } else if (selectedTab === 1) {
+      // Alzheimer sonuçları
+      const pieData = Object.entries(result.all_probabilities).map(([name, value]) => ({
+        name: name,
+        value: value
+      }));
+
+      const barData = [{
+        name: 'Sonuç',
+        ...result.all_probabilities
+      }];
+
+      const COLORS = ['#4caf50', '#ff9800', '#f44336', '#9c27b0'];
+
+      // Tahmin sonucunun rengini belirle
+      const getSeverityColor = (prediction) => {
+        switch(prediction) {
+          case 'Normal': return 'success';
+          case 'Çok Hafif': return 'warning';
+          case 'Hafif': return 'error';
+          case 'Orta': return 'error';
+          default: return 'info';
+        }
+      };
+
+      return (
+        <Box ref={resultsRef}>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <Typography variant="h6" gutterBottom color={getSeverityColor(result.prediction)} align="center">
+                Alzheimer Risk Analizi Sonucu: <strong>{result.prediction}</strong>
+              </Typography>
+              <Typography variant="body1" align="center" sx={{ mb: 3 }}>
+                Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
+              </Typography>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" gutterBottom align="center" color="primary">
+                Olasılık Dağılımı
+              </Typography>
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    paddingAngle={5}
+                    dataKey="value"
+                    label={({ name, value }) => `${name}: ${(value * 100).toFixed(2)}%`}
+                  >
+                    {pieData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip 
+                    formatter={(value) => `${(value * 100).toFixed(2)}%`}
+                  />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" gutterBottom align="center" color="primary">
+                Karşılaştırmalı Analiz
+              </Typography>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart
+                  data={barData}
+                  margin={{
+                    top: 20,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                  }}
+                >
+                  {Object.keys(result.all_probabilities).map((key, index) => (
+                    <Bar key={key} dataKey={key} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                  <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
+                  <Legend />
+                </BarChart>
+              </ResponsiveContainer>
+            </Grid>
+
+            <Grid item xs={12}>
+              <Alert severity={getSeverityColor(result.prediction)} sx={{ mt: 2 }}>
+                <Typography variant="body1">
+                  {result.prediction === 'Normal' 
+                    ? "Görüntüde Alzheimer belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
+                    : `Görüntüde ${result.prediction.toLowerCase()} düzeyde Alzheimer belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun.`
+                  }
+                </Typography>
+              </Alert>
+            </Grid>
+          </Grid>
+        </Box>
+      );
+    }
   };
 
   const handleSettingChange = (setting) => (event, newValue) => {
@@ -457,11 +563,10 @@ function App() {
               sx={{ borderBottom: 1, borderColor: 'divider', mb: 2 }}
             >
               <Tab icon={<BiotechIcon />} label="Beyin Tümörü" />
-              <Tab icon={<CoronavirusIcon />} label="Kanser" disabled />
-              <Tab icon={<PsychologyIcon />} label="Alzheimer" disabled />
+              <Tab icon={<PsychologyIcon />} label="Alzheimer" />
             </Tabs>
 
-            {[0, 1, 2].map((index) => (
+            {[0, 1].map((index) => (
               <TabPanel key={index} value={selectedTab} index={index}>
                 <Alert severity="info" sx={{ mb: 3 }}>
                   <Typography variant="subtitle1" gutterBottom>
@@ -540,16 +645,13 @@ function App() {
                   </Box>
                 )}
 
-                {result && (
-                  <Box sx={{ mt: 4 }}>
-                    <Typography variant="h6" gutterBottom color="primary">
-                      Analiz Sonuçları
-                    </Typography>
-                    <Paper elevation={2} sx={{ p: 3, bgcolor: 'background.default' }}>
-                      {renderAnalysisResults(result)}
-                    </Paper>
-                  </Box>
+                {error && (
+                  <Alert severity="error" sx={{ mt: 2 }}>
+                    {error}
+                  </Alert>
                 )}
+
+                {result && renderAnalysisResults(result)}
               </TabPanel>
             ))}
           </Paper>

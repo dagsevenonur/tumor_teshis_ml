@@ -3,108 +3,97 @@ import torch.nn as nn
 from torchvision import transforms, models
 from PIL import Image
 import numpy as np
-import cv2
 import os
 
 class AlzheimerDetector:
-    def __init__(self):
-        self.model = models.resnet50(pretrained=False)
-        num_ftrs = self.model.fc.in_features
-        # Alzheimer için 4 sınıf: Normal, Hafif, Orta, Şiddetli
-        self.model.fc = nn.Linear(num_ftrs, 4)
+    def __init__(self, model_path='../models/alzheimer_best.pth'):
+        # Sınıf isimleri - Test verisiyle aynı sırada olmalı
+        self.class_names = ['non_demented', 'very_mild_demented', 'mild_demented', 'moderate_demented']
+        self.display_names = {
+            'non_demented': 'Normal',
+            'very_mild_demented': 'Çok Hafif',
+            'mild_demented': 'Hafif',
+            'moderate_demented': 'Orta'
+        }
         
-        # Görüntü dönüşüm işlemleri
+        # Model mimarisini oluştur
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        print(f"Cihaz: {self.device}")
+        
+        self.model = models.resnet50(weights=models.ResNet50_Weights.IMAGENET1K_V1)
+        num_ftrs = self.model.fc.in_features
+        
+        # Eğitim sırasında kullanılan mimari ile aynı yapıyı oluştur
+        self.model.fc = nn.Sequential(
+            nn.Dropout(0.5),
+            nn.Linear(num_ftrs, 512),
+            nn.BatchNorm1d(512),
+            nn.ReLU(),
+            nn.Dropout(0.3),
+            nn.Linear(512, len(self.class_names))
+        )
+        self.model = self.model.to(self.device)
+        
+        try:
+            print(f"Model yükleniyor: {model_path}")
+            if not os.path.exists(model_path):
+                raise FileNotFoundError(f"Model dosyası bulunamadı: {model_path}")
+            
+            # Model ağırlıklarını güvenli şekilde yükle
+            checkpoint = torch.load(model_path, map_location=self.device)
+            self.model.load_state_dict(checkpoint['model_state_dict'])
+            print("Model başarıyla yüklendi")
+            print(f"Eğitim doğruluğu: {checkpoint.get('train_acc', 0):.2%}")
+            print(f"Doğrulama doğruluğu: {checkpoint.get('val_acc', 0):.2%}")
+            
+            self.model.eval()
+        except Exception as e:
+            print(f"Model yükleme hatası: {str(e)}")
+            raise Exception(f"Model yüklenemedi: {str(e)}")
+        
+        # Görüntü ön işleme
         self.transform = transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor(),
-            transforms.Normalize(mean=[0.485, 0.456, 0.406], 
-                            std=[0.229, 0.224, 0.225])
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
         ])
-        
-        # Model ağırlıklarını yükle
-        model_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models', 'alzheimer_best.pth')
-        print(f"Alzheimer model yolu: {model_path}")
-        try:
-            checkpoint = torch.load(model_path)
-            self.model.load_state_dict(checkpoint['model_state_dict'])
-            print("Alzheimer modeli başarıyla yüklendi")
-            print(f"Eğitim doğruluğu: {checkpoint['train_acc']:.2f}%")
-            print(f"Doğrulama doğruluğu: {checkpoint['val_acc']:.2f}%")
-        except Exception as e:
-            print(f"Model yüklenirken hata: {str(e)}")
-        
-        self.model.eval()
     
-    def enhance_image(self, image_array):
-        # Görüntüyü BGR'dan RGB'ye dönüştür
-        if len(image_array.shape) == 3:
-            image_array = cv2.cvtColor(image_array, cv2.COLOR_BGR2RGB)
-        elif len(image_array.shape) == 2:
-            image_array = cv2.cvtColor(image_array, cv2.COLOR_GRAY2RGB)
-            
-        # CLAHE uygula
-        lab = cv2.cvtColor(image_array, cv2.COLOR_RGB2LAB)
-        l, a, b = cv2.split(lab)
-        clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
-        cl = clahe.apply(l)
-        enhanced_lab = cv2.merge((cl,a,b))
-        enhanced = cv2.cvtColor(enhanced_lab, cv2.COLOR_LAB2RGB)
-        
-        # Gürültü azaltma
-        denoised = cv2.fastNlMeansDenoisingColored(enhanced, None, 10, 10, 7, 21)
-        
-        return denoised
-        
-    def detect(self, image_path):
+    def predict(self, image_path):
         try:
-            print(f"Alzheimer analizi yapılıyor: {image_path}")
+            # Görüntüyü yükle ve ön işle
+            if not os.path.exists(image_path):
+                raise FileNotFoundError(f"Görüntü dosyası bulunamadı: {image_path}")
             
-            # Görüntüyü yükle
+            print(f"Görüntü analiz ediliyor: {image_path}")
             image = Image.open(image_path).convert('RGB')
-            print(f"Görüntü boyutu: {image.size}")
-            
-            # Görüntü iyileştirme
-            image_array = np.array(image)
-            enhanced = self.enhance_image(image_array)
-            enhanced_image = Image.fromarray(enhanced)
-            
-            # Görüntüyü modelin beklediği formata dönüştür
-            image_tensor = self.transform(enhanced_image).unsqueeze(0)
+            image_tensor = self.transform(image).unsqueeze(0).to(self.device)
             
             # Tahmin yap
             with torch.no_grad():
                 outputs = self.model(image_tensor)
-                probabilities = torch.softmax(outputs, dim=1)[0]
-                
-                # Ham çıktıları yazdır
-                print(f"Model çıktıları: {outputs[0]}")
-                print(f"Olasılıklar: {probabilities}")
-                
-                # En yüksek olasılıklı sınıfı bul
-                max_prob, predicted_class = torch.max(probabilities, dim=0)
-                
-                # Sınıf etiketleri
-                classes = ['Normal', 'Hafif', 'Orta', 'Şiddetli']
-                predicted_label = classes[predicted_class.item()]
-                
-                # Tüm sınıfların olasılıklarını al
-                class_probs = {
-                    classes[i]: probabilities[i].item() 
-                    for i in range(len(classes))
-                }
-                
-                print(f"Tahmin sonucu: {predicted_label}, Olasılık={max_prob.item():.4f}")
+                probabilities = torch.nn.functional.softmax(outputs, dim=1)
+                predicted_prob, predicted_idx = torch.max(probabilities, 1)
             
-            return {
-                "predicted_class": predicted_label,
-                "confidence": max_prob.item(),
-                "all_probabilities": class_probs,
-                "success": True
+            # Sonuçları hazırla
+            predicted_class = predicted_idx.item()
+            confidence = predicted_prob.item()
+            
+            # Ham çıktıları yazdır
+            print(f"Model çıktıları: {outputs[0]}")
+            print(f"Olasılıklar: {probabilities[0]}")
+            print(f"Tahmin: {self.display_names[self.class_names[predicted_class]]} ({confidence:.2%})")
+            
+            result = {
+                'predicted_class': predicted_class,
+                'prediction': self.display_names[self.class_names[predicted_class]],
+                'confidence': confidence,
+                'all_probabilities': {
+                    self.display_names[class_name]: prob.item()
+                    for class_name, prob in zip(self.class_names, probabilities[0])
+                }
             }
             
+            return result
         except Exception as e:
-            print(f"Hata oluştu: {str(e)}")
-            return {
-                "success": False,
-                "error": str(e)
-            } 
+            print(f"Tahmin hatası: {str(e)}")
+            raise Exception(f"Görüntü analizi başarısız: {str(e)}") 

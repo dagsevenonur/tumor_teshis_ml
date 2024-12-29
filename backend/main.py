@@ -1,4 +1,4 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import os
 from brain_tumor_detector import BrainTumorDetector
@@ -19,8 +19,8 @@ app.add_middleware(
 def read_root():
     return {"message": "Beyin MR Görüntü Analiz API'sine Hoş Geldiniz"}
 
-@app.post("/analyze/brain-tumor")
-async def analyze_brain_tumor(file: UploadFile = File(...)):
+@app.post("/analyze/tumor")
+async def analyze_tumor(file: UploadFile = File(...)):
     try:
         # Geçici dosya oluştur
         temp_path = f"temp_{file.filename}"
@@ -38,7 +38,9 @@ async def analyze_brain_tumor(file: UploadFile = File(...)):
             
         return result
     except Exception as e:
-        return {"error": str(e)}
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/analyze/alzheimer")
 async def analyze_alzheimer(file: UploadFile = File(...)):
@@ -51,7 +53,7 @@ async def analyze_alzheimer(file: UploadFile = File(...)):
         
         # Alzheimer analizi yap
         detector = AlzheimerDetector()
-        result = detector.detect(temp_path)
+        result = detector.predict(temp_path)
         
         # Geçici dosyayı sil
         if os.path.exists(temp_path):
@@ -59,4 +61,6 @@ async def analyze_alzheimer(file: UploadFile = File(...)):
             
         return result
     except Exception as e:
-        return {"error": str(e)} 
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+        raise HTTPException(status_code=500, detail=str(e)) 
