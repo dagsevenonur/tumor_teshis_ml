@@ -1,0 +1,1769 @@
+=== MODEL TEST SONUÇLARI ===
+Test Tarihi: 2024-12-29 17:30:17
+
+=== Beyin Tümörü Modeli ===
+Toplam Test Görüntüsü: 473
+Doğru Tahmin Sayısı: 472
+Doğruluk Oranı: %99.79
+
+Detaylı Sonuçlar:
+Dosya: image(1).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(10).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(100).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(102).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(106).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(107).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(109).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(11).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(112).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(113).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(118).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(12).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(120).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(121).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(123).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(124).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(125).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(126).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(127).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(13).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(14).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(15).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(16).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(17).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(18).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(19).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(2).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(20).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(21).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(22).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(23).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(24).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(25).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(26).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(27).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(28).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(29).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(3).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(30).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(31).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(32).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(33).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(34).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(35).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(36).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(37).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(38).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(39).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(4).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(40).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(41).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(42).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(43).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(44).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(45).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(46).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(47).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(48).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(49).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(5).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(50).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(51).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(52).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(53).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(54).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(55).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(56).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(57).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(58).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(59).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(6).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(60).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(61).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(62).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(63).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(64).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(65).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(66).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(67).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(68).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(69).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(7).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(70).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(71).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(72).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(73).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(74).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(75).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(76).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(77).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(78).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(79).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(8).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(80).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(81).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(82).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(83).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(84).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(85).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(86).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(87).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(88).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(89).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(9).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(90).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(91).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(92).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(93).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(94).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(95).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(96).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(97).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(98).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image(99).jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: image.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y1.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y10.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y100.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y101.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y102.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y103.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y104.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y105.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y106.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y107.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y108.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y109.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y11.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y111.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y112.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y113.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y114.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y115.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y116.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y117.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y12.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y120.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y13.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y14.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y146.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y147.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y148.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y15.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y153.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y154.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y155.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y156.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y157.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y158.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y159.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y16.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y160.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y161.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y162.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y163.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y164.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y165.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y166.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y167.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y168.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y169.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y17.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y170.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y18.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y180.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y181.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y182.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y183.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y184.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y185.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y186.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y187.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y188.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y19.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y192.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y193.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y194.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y195.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y2.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y20.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y21.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y22.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y23.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y24.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y242.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y243.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y244.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y245.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y246.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y247.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y248.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y249.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y25.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y250.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y251.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y252.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y253.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y254.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y255.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y256.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y257.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y258.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y259.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y26.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y27.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y28.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y29.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y3.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y30.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y31.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y32.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y33.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y34.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y35.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y36.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y37.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y38.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y39.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y4.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y40.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y41.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y42.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y44.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y45.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y46.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y47.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y49.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y50.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y51.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y52.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y53.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y54.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y55.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y56.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y58.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y59.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y6.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y60.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y61.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y62.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y65.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y66.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y67.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y69.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y7.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y70.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y71.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y73.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y74.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y75.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y76.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y77.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y78.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y79.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y8.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y81.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y82.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y85.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y86.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y89.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y9.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y90.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y91.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y92.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y92.png, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y95.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y96.jpg, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y97.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y98.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: Y99.JPG, Gerçek: Tümörlü, Tahmin: Tümörlü, Durum: Doğru
+Dosya: 1 no.jpeg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 10 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 11 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 12 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 13 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 14 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 15 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 17 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 18 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 19 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 2 no.jpeg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 20 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 21 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 22 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 23 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 24 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 25 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 26 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 27 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 28 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 29 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 3 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 30 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 31 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 32 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 33 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 34 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 35 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 36 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 37 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 38 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 39 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 4 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 40 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 41 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 42 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 43 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 44no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 45 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 46 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 47 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 48 no.jpeg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 49 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 5 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 50 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 6 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 7 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 8 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: 9 no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(1).jpg, Gerçek: Normal, Tahmin: Tümörlü, Durum: Yanlış
+Dosya: image(10).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(100).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(101).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(102).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(103).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(104).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(11).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(12).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(13).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(14).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(15).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(16).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(17).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(18).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(19).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(2).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(20).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(21).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(22).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(23).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(24).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(25).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(26).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(27).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(28).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(29).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(3).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(30).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(31).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(32).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(33).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(34).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(35).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(36).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(37).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(38).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(39).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(4).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(40).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(41).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(42).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(43).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(44).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(45).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(46).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(47).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(48).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(49).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(5).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(50).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(51).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(52).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(53).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(54).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(55).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(56).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(57).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(58).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(59).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(6).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(60).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(61).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(62).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(63).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(64).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(65).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(66).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(67).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(68).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(69).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(7).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(70).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(71).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(72).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(73).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(74).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(75).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(76).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(77).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(78).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(79).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(8).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(80).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(81).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(82).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(83).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(84).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(85).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(86).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(87).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(88).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(89).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(9).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(90).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(91).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(92).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(93).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(94).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(95).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(96).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(97).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(98).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image(99).jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: image.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N1.JPG, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N11.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N15.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N16.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N17.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N19.JPG, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N2.JPG, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N20.JPG, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N21.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N22.JPG, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N26.JPG, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N3.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N5.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: N6.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 1.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 10.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 100.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 2.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 3.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 4.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 5.jpeg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 6.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 7.jpeg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 8.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 89.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 9.png, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 90.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 91.jpeg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 92.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 923.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 94.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 95.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 96.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 97.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 98.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no 99.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: no.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No11.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No12.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No13.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No14.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No15.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No16.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No17.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No18.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No19.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No20.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No21.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+Dosya: No22.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru
+
+=== Alzheimer Modeli ===
+Toplam Test Görüntüsü: 1280
+Doğru Tahmin Sayısı: 997
+Doğruluk Oranı: %77.89
+
+Detaylı Sonuçlar:
+Dosya: test_0001.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 99.43%
+Dosya: test_0004.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 88.09%
+Dosya: test_0010.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 71.27%
+Dosya: test_0018.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 62.32%
+Dosya: test_0032.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 91.61%
+Dosya: test_0049.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 97.35%
+Dosya: test_0059.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.56%
+Dosya: test_0065.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 96.97%
+Dosya: test_0087.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 94.05%
+Dosya: test_0093.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 91.31%
+Dosya: test_0096.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 92.77%
+Dosya: test_0097.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 98.47%
+Dosya: test_0098.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 99.52%
+Dosya: test_0104.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 84.55%
+Dosya: test_0107.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.60%
+Dosya: test_0112.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 50.24%
+Dosya: test_0114.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 96.23%
+Dosya: test_0121.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 43.32%
+Dosya: test_0122.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 90.67%
+Dosya: test_0124.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 68.16%
+Dosya: test_0125.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 78.77%
+Dosya: test_0127.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 69.17%
+Dosya: test_0131.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 77.85%
+Dosya: test_0133.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 98.26%
+Dosya: test_0136.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 54.84%
+Dosya: test_0148.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 97.63%
+Dosya: test_0152.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 71.77%
+Dosya: test_0156.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 99.64%
+Dosya: test_0157.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 64.22%
+Dosya: test_0162.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 98.87%
+Dosya: test_0171.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 60.89%
+Dosya: test_0174.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 49.55%
+Dosya: test_0183.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 97.08%
+Dosya: test_0207.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.49%
+Dosya: test_0213.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 64.47%
+Dosya: test_0218.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.95%
+Dosya: test_0228.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 63.76%
+Dosya: test_0241.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 49.61%
+Dosya: test_0243.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 72.91%
+Dosya: test_0245.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 97.26%
+Dosya: test_0246.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.69%
+Dosya: test_0256.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 99.85%
+Dosya: test_0291.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 52.77%
+Dosya: test_0296.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 98.49%
+Dosya: test_0304.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 86.16%
+Dosya: test_0312.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 82.05%
+Dosya: test_0325.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 75.64%
+Dosya: test_0326.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 66.67%
+Dosya: test_0332.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 98.50%
+Dosya: test_0335.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 81.35%
+Dosya: test_0337.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 99.34%
+Dosya: test_0343.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 61.23%
+Dosya: test_0345.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 61.69%
+Dosya: test_0348.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 94.13%
+Dosya: test_0362.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 72.41%
+Dosya: test_0366.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 85.52%
+Dosya: test_0370.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 61.28%
+Dosya: test_0377.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 48.53%
+Dosya: test_0401.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 98.81%
+Dosya: test_0406.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 75.92%
+Dosya: test_0417.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.19%
+Dosya: test_0429.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 50.27%
+Dosya: test_0431.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 91.29%
+Dosya: test_0452.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 86.35%
+Dosya: test_0458.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 63.40%
+Dosya: test_0460.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 80.28%
+Dosya: test_0467.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 89.51%
+Dosya: test_0469.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 57.75%
+Dosya: test_0481.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 53.63%
+Dosya: test_0501.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 71.67%
+Dosya: test_0510.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 87.45%
+Dosya: test_0528.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 69.40%
+Dosya: test_0529.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 46.08%
+Dosya: test_0532.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 99.96%
+Dosya: test_0536.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 74.79%
+Dosya: test_0537.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 89.91%
+Dosya: test_0559.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 98.77%
+Dosya: test_0560.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 62.81%
+Dosya: test_0561.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.60%
+Dosya: test_0569.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 60.60%
+Dosya: test_0577.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 40.11%
+Dosya: test_0599.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 97.13%
+Dosya: test_0603.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 67.54%
+Dosya: test_0604.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 97.12%
+Dosya: test_0608.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 52.51%
+Dosya: test_0617.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 70.94%
+Dosya: test_0618.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 94.94%
+Dosya: test_0626.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 98.13%
+Dosya: test_0629.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 88.68%
+Dosya: test_0646.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.23%
+Dosya: test_0651.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 69.68%
+Dosya: test_0652.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.48%
+Dosya: test_0657.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 97.83%
+Dosya: test_0662.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 69.68%
+Dosya: test_0663.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 89.22%
+Dosya: test_0675.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.57%
+Dosya: test_0694.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 84.78%
+Dosya: test_0695.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 74.76%
+Dosya: test_0698.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 96.51%
+Dosya: test_0709.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 61.17%
+Dosya: test_0711.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 64.13%
+Dosya: test_0713.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 98.95%
+Dosya: test_0716.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.92%
+Dosya: test_0720.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 60.45%
+Dosya: test_0763.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 78.62%
+Dosya: test_0765.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 58.35%
+Dosya: test_0772.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 97.55%
+Dosya: test_0781.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 58.12%
+Dosya: test_0797.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 56.50%
+Dosya: test_0799.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 99.94%
+Dosya: test_0800.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 60.13%
+Dosya: test_0803.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 62.87%
+Dosya: test_0808.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.70%
+Dosya: test_0814.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 84.75%
+Dosya: test_0816.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 58.36%
+Dosya: test_0820.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 67.76%
+Dosya: test_0821.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 83.39%
+Dosya: test_0826.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 86.22%
+Dosya: test_0836.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 93.90%
+Dosya: test_0858.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 80.80%
+Dosya: test_0863.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 93.96%
+Dosya: test_0866.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 89.33%
+Dosya: test_0870.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 73.83%
+Dosya: test_0877.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 98.71%
+Dosya: test_0894.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 96.75%
+Dosya: test_0913.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 81.47%
+Dosya: test_0914.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 99.77%
+Dosya: test_0923.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 97.63%
+Dosya: test_0926.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 97.18%
+Dosya: test_0928.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 94.43%
+Dosya: test_0942.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.30%
+Dosya: test_0944.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 90.91%
+Dosya: test_0945.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 98.36%
+Dosya: test_0947.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 99.79%
+Dosya: test_0961.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 92.05%
+Dosya: test_0969.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 83.35%
+Dosya: test_0974.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 56.89%
+Dosya: test_0980.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 90.92%
+Dosya: test_0982.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 84.93%
+Dosya: test_0993.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 98.46%
+Dosya: test_1009.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 69.92%
+Dosya: test_1016.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 94.58%
+Dosya: test_1018.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 53.80%
+Dosya: test_1021.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 98.98%
+Dosya: test_1032.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 87.42%
+Dosya: test_1034.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 72.49%
+Dosya: test_1048.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 94.00%
+Dosya: test_1050.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 99.14%
+Dosya: test_1053.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 90.29%
+Dosya: test_1067.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 93.63%
+Dosya: test_1069.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 98.76%
+Dosya: test_1079.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 92.79%
+Dosya: test_1095.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 97.33%
+Dosya: test_1110.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 97.35%
+Dosya: test_1140.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 94.68%
+Dosya: test_1145.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 63.92%
+Dosya: test_1166.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 69.81%
+Dosya: test_1171.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 63.17%
+Dosya: test_1173.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 91.48%
+Dosya: test_1197.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 83.04%
+Dosya: test_1201.jpg, Gerçek: Normal, Tahmin: Orta, Durum: Yanlış, Güven: 93.33%
+Dosya: test_1222.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 91.41%
+Dosya: test_1225.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 77.12%
+Dosya: test_1238.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 98.87%
+Dosya: test_1240.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 97.19%
+Dosya: test_1246.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 98.09%
+Dosya: test_1249.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 73.50%
+Dosya: test_1251.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 60.84%
+Dosya: test_1264.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 55.60%
+Dosya: test_1266.jpg, Gerçek: Normal, Tahmin: Hafif, Durum: Yanlış, Güven: 75.15%
+Dosya: test_1267.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 96.68%
+Dosya: test_1271.jpg, Gerçek: Normal, Tahmin: Normal, Durum: Doğru, Güven: 55.02%
+Dosya: test_0070.jpg, Gerçek: Çok Hafif, Tahmin: Hafif, Durum: Yanlış, Güven: 89.97%
+Dosya: test_0139.jpg, Gerçek: Çok Hafif, Tahmin: Orta, Durum: Yanlış, Güven: 97.88%
+Dosya: test_0209.jpg, Gerçek: Çok Hafif, Tahmin: Hafif, Durum: Yanlış, Güven: 59.02%
+Dosya: test_0250.jpg, Gerçek: Çok Hafif, Tahmin: Orta, Durum: Yanlış, Güven: 91.94%
+Dosya: test_0306.jpg, Gerçek: Çok Hafif, Tahmin: Çok Hafif, Durum: Doğru, Güven: 85.19%
+Dosya: test_0435.jpg, Gerçek: Çok Hafif, Tahmin: Hafif, Durum: Yanlış, Güven: 93.25%
+Dosya: test_0476.jpg, Gerçek: Çok Hafif, Tahmin: Hafif, Durum: Yanlış, Güven: 93.47%
+Dosya: test_0496.jpg, Gerçek: Çok Hafif, Tahmin: Hafif, Durum: Yanlış, Güven: 96.28%
+Dosya: test_0502.jpg, Gerçek: Çok Hafif, Tahmin: Çok Hafif, Durum: Doğru, Güven: 96.66%
+Dosya: test_0840.jpg, Gerçek: Çok Hafif, Tahmin: Çok Hafif, Durum: Doğru, Güven: 67.52%
+Dosya: test_0929.jpg, Gerçek: Çok Hafif, Tahmin: Çok Hafif, Durum: Doğru, Güven: 79.72%
+Dosya: test_1133.jpg, Gerçek: Çok Hafif, Tahmin: Orta, Durum: Yanlış, Güven: 91.59%
+Dosya: test_1136.jpg, Gerçek: Çok Hafif, Tahmin: Çok Hafif, Durum: Doğru, Güven: 90.94%
+Dosya: test_1215.jpg, Gerçek: Çok Hafif, Tahmin: Hafif, Durum: Yanlış, Güven: 93.11%
+Dosya: test_1216.jpg, Gerçek: Çok Hafif, Tahmin: Hafif, Durum: Yanlış, Güven: 91.19%
+Dosya: test_0002.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.84%
+Dosya: test_0006.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0007.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0008.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.52%
+Dosya: test_0012.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0014.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.62%
+Dosya: test_0020.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 63.24%
+Dosya: test_0023.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0026.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0027.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 94.34%
+Dosya: test_0029.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.43%
+Dosya: test_0030.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0031.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0033.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.26%
+Dosya: test_0035.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0036.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0037.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.64%
+Dosya: test_0038.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0042.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.01%
+Dosya: test_0043.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_0044.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0045.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0048.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0050.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0054.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.31%
+Dosya: test_0056.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0057.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.71%
+Dosya: test_0058.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0060.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.67%
+Dosya: test_0063.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_0064.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0068.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0069.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.69%
+Dosya: test_0072.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.73%
+Dosya: test_0073.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.53%
+Dosya: test_0074.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.49%
+Dosya: test_0075.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.35%
+Dosya: test_0076.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.70%
+Dosya: test_0077.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0080.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0081.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.03%
+Dosya: test_0082.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 81.24%
+Dosya: test_0085.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.85%
+Dosya: test_0088.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.74%
+Dosya: test_0091.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0092.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.89%
+Dosya: test_0095.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.70%
+Dosya: test_0101.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.87%
+Dosya: test_0103.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0105.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0106.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.81%
+Dosya: test_0109.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.72%
+Dosya: test_0113.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0115.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0120.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0123.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.46%
+Dosya: test_0129.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0130.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.23%
+Dosya: test_0132.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0135.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0140.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0141.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0142.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.44%
+Dosya: test_0143.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0144.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0151.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0155.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.52%
+Dosya: test_0158.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0159.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0163.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0164.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0165.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.33%
+Dosya: test_0166.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0168.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0169.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0173.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0175.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.87%
+Dosya: test_0176.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0178.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0179.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0181.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0182.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0184.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0185.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.26%
+Dosya: test_0186.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0188.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0190.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0192.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0194.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0195.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0202.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.68%
+Dosya: test_0203.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.66%
+Dosya: test_0204.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0205.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0208.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 51.67%
+Dosya: test_0211.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.06%
+Dosya: test_0212.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.13%
+Dosya: test_0214.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.80%
+Dosya: test_0215.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0217.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0220.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.03%
+Dosya: test_0222.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0223.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0224.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0226.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0229.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.86%
+Dosya: test_0230.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.78%
+Dosya: test_0232.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0237.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.68%
+Dosya: test_0240.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0242.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_0244.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.27%
+Dosya: test_0255.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0257.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0258.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0259.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.49%
+Dosya: test_0260.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.06%
+Dosya: test_0261.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.74%
+Dosya: test_0262.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0263.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0264.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.70%
+Dosya: test_0265.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_0269.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.08%
+Dosya: test_0270.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0272.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.16%
+Dosya: test_0275.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0276.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0277.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.72%
+Dosya: test_0279.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_0282.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.84%
+Dosya: test_0283.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.64%
+Dosya: test_0284.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0287.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0289.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0290.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 93.81%
+Dosya: test_0293.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_0295.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.13%
+Dosya: test_0297.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0298.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 80.62%
+Dosya: test_0300.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.63%
+Dosya: test_0302.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0305.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.76%
+Dosya: test_0307.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0308.jpg, Gerçek: Hafif, Tahmin: Orta, Durum: Yanlış, Güven: 57.03%
+Dosya: test_0310.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0317.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.62%
+Dosya: test_0319.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.45%
+Dosya: test_0321.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.83%
+Dosya: test_0322.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_0323.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.43%
+Dosya: test_0327.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0328.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0333.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.15%
+Dosya: test_0334.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.69%
+Dosya: test_0336.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.64%
+Dosya: test_0338.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0340.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0341.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.80%
+Dosya: test_0342.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0346.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0352.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0354.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.02%
+Dosya: test_0356.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.71%
+Dosya: test_0357.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 76.11%
+Dosya: test_0359.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0363.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0367.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.96%
+Dosya: test_0369.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0371.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0372.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.66%
+Dosya: test_0374.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0379.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0380.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.53%
+Dosya: test_0381.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0382.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0383.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 57.14%
+Dosya: test_0384.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0385.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.28%
+Dosya: test_0387.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0389.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0390.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0394.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_0395.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0400.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0404.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0405.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_0407.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.49%
+Dosya: test_0408.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 93.08%
+Dosya: test_0409.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.51%
+Dosya: test_0410.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.33%
+Dosya: test_0414.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.00%
+Dosya: test_0416.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.14%
+Dosya: test_0420.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0421.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0422.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0423.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0426.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.89%
+Dosya: test_0427.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.53%
+Dosya: test_0428.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_0430.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0432.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.71%
+Dosya: test_0433.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.29%
+Dosya: test_0437.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_0438.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.41%
+Dosya: test_0439.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.87%
+Dosya: test_0441.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.74%
+Dosya: test_0444.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0446.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0447.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0448.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0450.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0454.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0456.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.48%
+Dosya: test_0459.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0462.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0463.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0465.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.86%
+Dosya: test_0468.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0470.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0477.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.84%
+Dosya: test_0478.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.45%
+Dosya: test_0479.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0480.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0482.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.81%
+Dosya: test_0483.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0484.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0485.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0488.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0489.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0490.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0491.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 92.75%
+Dosya: test_0492.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0493.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0497.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 69.01%
+Dosya: test_0498.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.88%
+Dosya: test_0499.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.95%
+Dosya: test_0503.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0504.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0505.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 60.54%
+Dosya: test_0506.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.74%
+Dosya: test_0507.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0508.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0509.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0511.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0512.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 93.94%
+Dosya: test_0514.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.33%
+Dosya: test_0515.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0517.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0518.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0519.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.97%
+Dosya: test_0523.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0524.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 83.61%
+Dosya: test_0525.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.40%
+Dosya: test_0527.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.77%
+Dosya: test_0530.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0531.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0533.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.35%
+Dosya: test_0534.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0539.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.27%
+Dosya: test_0541.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0542.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0543.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0546.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.75%
+Dosya: test_0547.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.75%
+Dosya: test_0554.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.78%
+Dosya: test_0555.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0557.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_0558.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0562.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_0563.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0564.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0565.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0566.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.33%
+Dosya: test_0567.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.52%
+Dosya: test_0572.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0573.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0575.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0579.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.92%
+Dosya: test_0580.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.41%
+Dosya: test_0581.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0583.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0584.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 95.38%
+Dosya: test_0588.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.63%
+Dosya: test_0590.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0591.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0592.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0594.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_0595.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0602.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0607.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.74%
+Dosya: test_0609.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0610.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.83%
+Dosya: test_0612.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.56%
+Dosya: test_0613.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.77%
+Dosya: test_0614.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.76%
+Dosya: test_0615.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0619.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.76%
+Dosya: test_0620.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0622.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0623.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0628.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.55%
+Dosya: test_0630.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 89.09%
+Dosya: test_0631.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.60%
+Dosya: test_0632.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.89%
+Dosya: test_0633.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.63%
+Dosya: test_0637.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 95.03%
+Dosya: test_0638.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0640.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0641.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.40%
+Dosya: test_0642.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0643.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0645.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0647.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.67%
+Dosya: test_0648.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0653.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0655.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0658.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.47%
+Dosya: test_0660.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.23%
+Dosya: test_0661.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0664.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0665.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0666.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.57%
+Dosya: test_0668.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.24%
+Dosya: test_0669.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.63%
+Dosya: test_0670.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.83%
+Dosya: test_0671.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_0674.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_0676.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0678.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0681.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 89.54%
+Dosya: test_0683.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.83%
+Dosya: test_0685.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0687.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0688.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.04%
+Dosya: test_0689.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 88.14%
+Dosya: test_0691.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.76%
+Dosya: test_0692.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.70%
+Dosya: test_0693.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0701.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0702.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0704.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0705.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0706.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0707.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0708.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.61%
+Dosya: test_0710.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.34%
+Dosya: test_0714.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.89%
+Dosya: test_0717.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.44%
+Dosya: test_0719.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 87.56%
+Dosya: test_0721.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0722.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0723.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.66%
+Dosya: test_0724.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0725.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0726.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0727.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_0728.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.05%
+Dosya: test_0730.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.59%
+Dosya: test_0734.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0736.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0739.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.76%
+Dosya: test_0740.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0742.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0745.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0746.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.77%
+Dosya: test_0749.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_0750.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0753.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.27%
+Dosya: test_0755.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0756.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0758.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.44%
+Dosya: test_0759.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0761.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.33%
+Dosya: test_0762.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.64%
+Dosya: test_0766.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 81.87%
+Dosya: test_0768.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0769.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0770.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 74.11%
+Dosya: test_0776.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0779.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.80%
+Dosya: test_0780.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0783.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0784.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0785.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_0786.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0789.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0790.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0791.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.73%
+Dosya: test_0793.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0794.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0795.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0796.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.57%
+Dosya: test_0801.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.73%
+Dosya: test_0802.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0804.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0805.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.73%
+Dosya: test_0806.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.53%
+Dosya: test_0807.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.62%
+Dosya: test_0809.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0812.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0817.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_0818.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.83%
+Dosya: test_0819.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0822.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.35%
+Dosya: test_0824.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0825.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0829.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.72%
+Dosya: test_0832.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.42%
+Dosya: test_0833.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 94.32%
+Dosya: test_0834.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.89%
+Dosya: test_0835.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0838.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.70%
+Dosya: test_0839.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.49%
+Dosya: test_0841.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0843.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0844.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0845.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0846.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.84%
+Dosya: test_0847.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0849.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 86.71%
+Dosya: test_0850.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0851.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0852.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.74%
+Dosya: test_0853.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0854.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0855.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0856.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.04%
+Dosya: test_0857.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0859.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.66%
+Dosya: test_0861.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0867.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0868.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0869.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0871.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0872.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.78%
+Dosya: test_0876.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_0878.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.76%
+Dosya: test_0881.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.35%
+Dosya: test_0882.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.70%
+Dosya: test_0883.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0886.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.50%
+Dosya: test_0887.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0889.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0892.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0893.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.24%
+Dosya: test_0898.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_0899.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 81.05%
+Dosya: test_0900.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.32%
+Dosya: test_0901.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.89%
+Dosya: test_0904.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0905.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.50%
+Dosya: test_0907.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0909.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_0911.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.86%
+Dosya: test_0912.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.78%
+Dosya: test_0915.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0917.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.89%
+Dosya: test_0919.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.77%
+Dosya: test_0921.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0922.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0924.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_0927.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0930.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.30%
+Dosya: test_0931.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.71%
+Dosya: test_0933.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0935.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0936.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_0937.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.22%
+Dosya: test_0938.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_0939.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.58%
+Dosya: test_0940.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0941.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.55%
+Dosya: test_0943.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.69%
+Dosya: test_0948.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.58%
+Dosya: test_0949.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_0950.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 94.11%
+Dosya: test_0951.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.42%
+Dosya: test_0953.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0955.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.31%
+Dosya: test_0957.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_0958.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0959.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_0962.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0963.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.64%
+Dosya: test_0968.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.99%
+Dosya: test_0970.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0971.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 60.10%
+Dosya: test_0972.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0976.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0978.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_0981.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.66%
+Dosya: test_0983.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_0984.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0985.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.68%
+Dosya: test_0986.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_0989.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 92.33%
+Dosya: test_0990.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_0992.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_0994.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.83%
+Dosya: test_0997.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_0999.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.76%
+Dosya: test_1000.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_1002.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1004.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_1005.jpg, Gerçek: Hafif, Tahmin: Orta, Durum: Yanlış, Güven: 93.58%
+Dosya: test_1007.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_1008.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_1011.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.77%
+Dosya: test_1012.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_1013.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_1014.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_1019.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1025.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_1027.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_1028.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_1029.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.88%
+Dosya: test_1033.jpg, Gerçek: Hafif, Tahmin: Orta, Durum: Yanlış, Güven: 95.92%
+Dosya: test_1035.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_1036.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.53%
+Dosya: test_1039.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.46%
+Dosya: test_1041.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.75%
+Dosya: test_1042.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_1045.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_1047.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_1049.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1051.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1054.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_1057.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.62%
+Dosya: test_1058.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_1059.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_1062.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.13%
+Dosya: test_1063.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_1065.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.89%
+Dosya: test_1068.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_1071.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.34%
+Dosya: test_1073.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_1074.jpg, Gerçek: Hafif, Tahmin: Orta, Durum: Yanlış, Güven: 88.45%
+Dosya: test_1077.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1078.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 94.88%
+Dosya: test_1080.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_1081.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 61.74%
+Dosya: test_1084.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 76.16%
+Dosya: test_1087.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.68%
+Dosya: test_1091.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.92%
+Dosya: test_1092.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.79%
+Dosya: test_1096.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1098.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_1100.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.81%
+Dosya: test_1101.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.84%
+Dosya: test_1102.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 94.00%
+Dosya: test_1105.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.31%
+Dosya: test_1106.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.80%
+Dosya: test_1109.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.48%
+Dosya: test_1113.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1115.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 72.54%
+Dosya: test_1117.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1119.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1121.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_1126.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_1127.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.70%
+Dosya: test_1128.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.80%
+Dosya: test_1129.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.70%
+Dosya: test_1132.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.86%
+Dosya: test_1134.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_1135.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_1137.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_1138.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_1144.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_1147.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.27%
+Dosya: test_1148.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1149.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_1151.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.76%
+Dosya: test_1152.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.92%
+Dosya: test_1155.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.66%
+Dosya: test_1159.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1161.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.25%
+Dosya: test_1162.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.80%
+Dosya: test_1165.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 85.51%
+Dosya: test_1168.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_1169.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.96%
+Dosya: test_1172.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1176.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_1177.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_1178.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1181.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.67%
+Dosya: test_1182.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 97.86%
+Dosya: test_1183.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 96.05%
+Dosya: test_1185.jpg, Gerçek: Hafif, Tahmin: Orta, Durum: Yanlış, Güven: 94.41%
+Dosya: test_1188.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_1190.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.78%
+Dosya: test_1191.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_1195.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.86%
+Dosya: test_1198.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.69%
+Dosya: test_1203.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.87%
+Dosya: test_1207.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_1208.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.78%
+Dosya: test_1210.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.89%
+Dosya: test_1211.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_1212.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.86%
+Dosya: test_1213.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.90%
+Dosya: test_1214.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.19%
+Dosya: test_1217.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_1218.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1219.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1221.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.75%
+Dosya: test_1223.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.80%
+Dosya: test_1224.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.45%
+Dosya: test_1227.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.64%
+Dosya: test_1228.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.82%
+Dosya: test_1229.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.60%
+Dosya: test_1232.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1234.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.95%
+Dosya: test_1235.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1237.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1241.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_1244.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.97%
+Dosya: test_1245.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.85%
+Dosya: test_1250.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1252.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.98%
+Dosya: test_1253.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1254.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 92.06%
+Dosya: test_1255.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.94%
+Dosya: test_1258.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.01%
+Dosya: test_1260.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.93%
+Dosya: test_1261.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_1262.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 100.00%
+Dosya: test_1263.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 92.48%
+Dosya: test_1265.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_1268.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_1270.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_1272.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.92%
+Dosya: test_1273.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.91%
+Dosya: test_1276.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 98.97%
+Dosya: test_1278.jpg, Gerçek: Hafif, Tahmin: Hafif, Durum: Doğru, Güven: 99.99%
+Dosya: test_0000.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 59.95%
+Dosya: test_0003.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 88.79%
+Dosya: test_0005.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 63.51%
+Dosya: test_0009.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 88.84%
+Dosya: test_0011.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 89.08%
+Dosya: test_0013.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 67.83%
+Dosya: test_0015.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 95.72%
+Dosya: test_0016.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.81%
+Dosya: test_0017.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 66.32%
+Dosya: test_0019.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.60%
+Dosya: test_0021.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 71.36%
+Dosya: test_0022.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 85.45%
+Dosya: test_0024.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 81.65%
+Dosya: test_0025.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 93.85%
+Dosya: test_0028.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.00%
+Dosya: test_0034.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 87.84%
+Dosya: test_0039.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 80.58%
+Dosya: test_0040.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.77%
+Dosya: test_0041.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 64.81%
+Dosya: test_0046.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 96.74%
+Dosya: test_0047.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 72.21%
+Dosya: test_0051.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 90.17%
+Dosya: test_0052.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 82.60%
+Dosya: test_0053.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 62.11%
+Dosya: test_0055.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.03%
+Dosya: test_0061.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.30%
+Dosya: test_0062.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.50%
+Dosya: test_0066.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 76.58%
+Dosya: test_0067.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.23%
+Dosya: test_0071.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 90.07%
+Dosya: test_0078.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 89.68%
+Dosya: test_0079.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 71.28%
+Dosya: test_0083.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 68.92%
+Dosya: test_0084.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 89.83%
+Dosya: test_0086.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 89.77%
+Dosya: test_0089.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 69.11%
+Dosya: test_0090.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 53.77%
+Dosya: test_0094.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.32%
+Dosya: test_0099.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.63%
+Dosya: test_0100.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.86%
+Dosya: test_0102.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.94%
+Dosya: test_0108.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 89.51%
+Dosya: test_0110.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 80.93%
+Dosya: test_0111.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.50%
+Dosya: test_0116.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 91.56%
+Dosya: test_0117.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.54%
+Dosya: test_0118.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.67%
+Dosya: test_0119.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.66%
+Dosya: test_0126.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 62.08%
+Dosya: test_0128.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.78%
+Dosya: test_0134.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 57.59%
+Dosya: test_0137.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.84%
+Dosya: test_0138.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 58.29%
+Dosya: test_0145.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 77.20%
+Dosya: test_0146.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.51%
+Dosya: test_0147.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.89%
+Dosya: test_0149.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.23%
+Dosya: test_0150.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.09%
+Dosya: test_0153.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 84.40%
+Dosya: test_0154.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.15%
+Dosya: test_0160.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.48%
+Dosya: test_0161.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.88%
+Dosya: test_0167.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.05%
+Dosya: test_0170.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.51%
+Dosya: test_0172.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.81%
+Dosya: test_0177.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 77.08%
+Dosya: test_0180.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 82.97%
+Dosya: test_0187.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 91.21%
+Dosya: test_0189.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.32%
+Dosya: test_0191.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 52.00%
+Dosya: test_0193.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 81.11%
+Dosya: test_0196.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 70.02%
+Dosya: test_0197.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.20%
+Dosya: test_0198.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.78%
+Dosya: test_0199.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.07%
+Dosya: test_0200.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 74.85%
+Dosya: test_0201.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.87%
+Dosya: test_0206.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 86.67%
+Dosya: test_0210.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.04%
+Dosya: test_0216.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 76.69%
+Dosya: test_0219.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 93.04%
+Dosya: test_0221.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 81.20%
+Dosya: test_0225.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 86.52%
+Dosya: test_0227.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 90.92%
+Dosya: test_0231.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.92%
+Dosya: test_0233.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 95.40%
+Dosya: test_0234.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 85.52%
+Dosya: test_0235.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.50%
+Dosya: test_0236.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.03%
+Dosya: test_0238.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 89.54%
+Dosya: test_0239.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.38%
+Dosya: test_0247.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.89%
+Dosya: test_0248.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 91.33%
+Dosya: test_0249.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.61%
+Dosya: test_0251.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.97%
+Dosya: test_0252.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 70.45%
+Dosya: test_0253.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 67.35%
+Dosya: test_0254.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.65%
+Dosya: test_0266.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 69.92%
+Dosya: test_0267.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 77.31%
+Dosya: test_0268.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 83.22%
+Dosya: test_0271.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.72%
+Dosya: test_0273.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.92%
+Dosya: test_0274.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.63%
+Dosya: test_0278.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 83.56%
+Dosya: test_0280.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 92.39%
+Dosya: test_0281.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.52%
+Dosya: test_0285.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.91%
+Dosya: test_0286.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.50%
+Dosya: test_0288.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.89%
+Dosya: test_0292.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 88.97%
+Dosya: test_0294.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.86%
+Dosya: test_0299.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.57%
+Dosya: test_0301.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.60%
+Dosya: test_0303.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.78%
+Dosya: test_0309.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 88.36%
+Dosya: test_0311.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.51%
+Dosya: test_0313.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.82%
+Dosya: test_0314.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 66.61%
+Dosya: test_0315.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 91.10%
+Dosya: test_0316.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.58%
+Dosya: test_0318.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.80%
+Dosya: test_0320.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 92.37%
+Dosya: test_0324.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 90.82%
+Dosya: test_0329.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 57.56%
+Dosya: test_0330.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 75.22%
+Dosya: test_0331.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 54.92%
+Dosya: test_0339.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.15%
+Dosya: test_0344.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.89%
+Dosya: test_0347.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 51.48%
+Dosya: test_0349.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.60%
+Dosya: test_0350.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 90.39%
+Dosya: test_0351.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.05%
+Dosya: test_0353.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 88.89%
+Dosya: test_0355.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 62.60%
+Dosya: test_0358.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.28%
+Dosya: test_0360.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.88%
+Dosya: test_0361.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 63.23%
+Dosya: test_0364.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.83%
+Dosya: test_0365.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 50.47%
+Dosya: test_0368.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.95%
+Dosya: test_0373.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.28%
+Dosya: test_0375.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.97%
+Dosya: test_0376.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.85%
+Dosya: test_0378.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 76.05%
+Dosya: test_0386.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.80%
+Dosya: test_0388.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 66.17%
+Dosya: test_0391.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 56.10%
+Dosya: test_0392.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.51%
+Dosya: test_0393.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 74.40%
+Dosya: test_0396.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.85%
+Dosya: test_0397.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 83.10%
+Dosya: test_0398.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.69%
+Dosya: test_0399.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.94%
+Dosya: test_0402.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.00%
+Dosya: test_0403.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.95%
+Dosya: test_0411.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 93.89%
+Dosya: test_0412.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 69.54%
+Dosya: test_0413.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.31%
+Dosya: test_0415.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.47%
+Dosya: test_0418.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 80.28%
+Dosya: test_0419.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 89.28%
+Dosya: test_0424.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.79%
+Dosya: test_0425.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 46.15%
+Dosya: test_0434.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 59.32%
+Dosya: test_0436.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 91.95%
+Dosya: test_0440.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 96.48%
+Dosya: test_0442.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 55.45%
+Dosya: test_0443.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.82%
+Dosya: test_0445.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 75.12%
+Dosya: test_0449.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.10%
+Dosya: test_0451.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.89%
+Dosya: test_0453.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 50.89%
+Dosya: test_0455.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.06%
+Dosya: test_0457.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 94.71%
+Dosya: test_0461.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.74%
+Dosya: test_0464.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 58.56%
+Dosya: test_0466.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.77%
+Dosya: test_0471.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 82.29%
+Dosya: test_0472.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 97.78%
+Dosya: test_0473.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 85.15%
+Dosya: test_0474.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 78.96%
+Dosya: test_0475.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.53%
+Dosya: test_0486.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 93.32%
+Dosya: test_0487.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 95.79%
+Dosya: test_0494.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 84.71%
+Dosya: test_0495.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.66%
+Dosya: test_0500.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.13%
+Dosya: test_0513.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 78.74%
+Dosya: test_0516.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 56.60%
+Dosya: test_0520.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.10%
+Dosya: test_0521.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 72.46%
+Dosya: test_0522.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 64.59%
+Dosya: test_0526.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.55%
+Dosya: test_0535.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.67%
+Dosya: test_0538.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 88.02%
+Dosya: test_0540.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 82.06%
+Dosya: test_0544.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 57.43%
+Dosya: test_0545.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.83%
+Dosya: test_0548.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 75.77%
+Dosya: test_0549.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.11%
+Dosya: test_0550.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 84.47%
+Dosya: test_0551.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 88.74%
+Dosya: test_0552.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 78.07%
+Dosya: test_0553.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.53%
+Dosya: test_0556.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.33%
+Dosya: test_0568.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 70.33%
+Dosya: test_0570.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 80.56%
+Dosya: test_0571.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 92.23%
+Dosya: test_0574.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.88%
+Dosya: test_0576.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 76.93%
+Dosya: test_0578.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.58%
+Dosya: test_0582.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 58.67%
+Dosya: test_0585.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 97.29%
+Dosya: test_0586.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 61.61%
+Dosya: test_0587.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 89.24%
+Dosya: test_0589.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 85.76%
+Dosya: test_0593.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 52.37%
+Dosya: test_0596.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.95%
+Dosya: test_0597.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.32%
+Dosya: test_0598.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 56.85%
+Dosya: test_0600.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.72%
+Dosya: test_0601.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.61%
+Dosya: test_0605.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 96.68%
+Dosya: test_0606.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.69%
+Dosya: test_0611.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 82.68%
+Dosya: test_0616.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 96.13%
+Dosya: test_0621.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 68.72%
+Dosya: test_0624.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 70.20%
+Dosya: test_0625.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 87.39%
+Dosya: test_0627.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 57.63%
+Dosya: test_0634.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 82.37%
+Dosya: test_0635.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.33%
+Dosya: test_0636.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.77%
+Dosya: test_0639.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 93.44%
+Dosya: test_0644.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.24%
+Dosya: test_0649.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 84.72%
+Dosya: test_0650.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.85%
+Dosya: test_0654.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 66.13%
+Dosya: test_0656.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.26%
+Dosya: test_0659.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 85.74%
+Dosya: test_0667.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.82%
+Dosya: test_0672.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.88%
+Dosya: test_0673.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 78.87%
+Dosya: test_0677.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.89%
+Dosya: test_0679.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 97.29%
+Dosya: test_0680.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.60%
+Dosya: test_0682.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.14%
+Dosya: test_0684.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 84.24%
+Dosya: test_0686.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 97.70%
+Dosya: test_0690.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 86.16%
+Dosya: test_0696.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 70.37%
+Dosya: test_0697.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.62%
+Dosya: test_0699.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 64.17%
+Dosya: test_0700.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 97.96%
+Dosya: test_0703.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.82%
+Dosya: test_0712.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 96.28%
+Dosya: test_0715.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.63%
+Dosya: test_0718.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.90%
+Dosya: test_0729.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.09%
+Dosya: test_0731.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.30%
+Dosya: test_0732.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.38%
+Dosya: test_0733.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.36%
+Dosya: test_0735.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 83.22%
+Dosya: test_0737.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 85.18%
+Dosya: test_0738.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 61.97%
+Dosya: test_0741.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.87%
+Dosya: test_0743.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.23%
+Dosya: test_0744.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.15%
+Dosya: test_0747.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.66%
+Dosya: test_0748.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 89.74%
+Dosya: test_0751.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.08%
+Dosya: test_0752.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 76.28%
+Dosya: test_0754.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.31%
+Dosya: test_0757.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.26%
+Dosya: test_0760.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.86%
+Dosya: test_0764.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 93.88%
+Dosya: test_0767.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 62.39%
+Dosya: test_0771.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.44%
+Dosya: test_0773.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.09%
+Dosya: test_0774.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 59.67%
+Dosya: test_0775.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 56.43%
+Dosya: test_0777.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.43%
+Dosya: test_0778.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.28%
+Dosya: test_0782.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 67.64%
+Dosya: test_0787.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.60%
+Dosya: test_0788.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.05%
+Dosya: test_0792.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.83%
+Dosya: test_0798.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 85.71%
+Dosya: test_0810.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.93%
+Dosya: test_0811.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 97.55%
+Dosya: test_0813.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.56%
+Dosya: test_0815.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 93.50%
+Dosya: test_0823.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 51.10%
+Dosya: test_0827.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 79.97%
+Dosya: test_0828.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 87.83%
+Dosya: test_0830.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.42%
+Dosya: test_0831.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 92.66%
+Dosya: test_0837.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 86.28%
+Dosya: test_0842.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.48%
+Dosya: test_0848.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.27%
+Dosya: test_0860.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.57%
+Dosya: test_0862.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.28%
+Dosya: test_0864.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.83%
+Dosya: test_0865.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 53.54%
+Dosya: test_0873.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 96.59%
+Dosya: test_0874.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.02%
+Dosya: test_0875.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 76.36%
+Dosya: test_0879.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.17%
+Dosya: test_0880.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 54.29%
+Dosya: test_0884.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.05%
+Dosya: test_0885.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 93.52%
+Dosya: test_0888.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.46%
+Dosya: test_0890.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.91%
+Dosya: test_0891.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 51.56%
+Dosya: test_0895.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.81%
+Dosya: test_0896.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 65.26%
+Dosya: test_0897.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.51%
+Dosya: test_0902.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 69.92%
+Dosya: test_0903.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 64.35%
+Dosya: test_0906.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 92.67%
+Dosya: test_0908.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 90.99%
+Dosya: test_0910.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.89%
+Dosya: test_0916.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 86.80%
+Dosya: test_0918.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 93.89%
+Dosya: test_0920.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.10%
+Dosya: test_0925.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 91.72%
+Dosya: test_0932.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 72.12%
+Dosya: test_0934.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.85%
+Dosya: test_0946.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.42%
+Dosya: test_0952.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 89.97%
+Dosya: test_0954.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.35%
+Dosya: test_0956.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.75%
+Dosya: test_0960.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.03%
+Dosya: test_0964.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 80.93%
+Dosya: test_0965.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 54.96%
+Dosya: test_0966.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 61.91%
+Dosya: test_0967.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.36%
+Dosya: test_0973.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 83.17%
+Dosya: test_0975.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 67.66%
+Dosya: test_0977.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.95%
+Dosya: test_0979.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.48%
+Dosya: test_0987.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 90.22%
+Dosya: test_0988.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.42%
+Dosya: test_0991.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 95.90%
+Dosya: test_0995.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.07%
+Dosya: test_0996.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.90%
+Dosya: test_0998.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.87%
+Dosya: test_1001.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 73.77%
+Dosya: test_1003.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 84.05%
+Dosya: test_1006.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.24%
+Dosya: test_1010.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 82.98%
+Dosya: test_1015.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.39%
+Dosya: test_1017.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.42%
+Dosya: test_1020.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 70.59%
+Dosya: test_1022.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 92.39%
+Dosya: test_1023.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.91%
+Dosya: test_1024.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 81.35%
+Dosya: test_1026.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 92.79%
+Dosya: test_1030.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 87.68%
+Dosya: test_1031.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 92.62%
+Dosya: test_1037.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.97%
+Dosya: test_1038.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 80.42%
+Dosya: test_1040.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 50.53%
+Dosya: test_1043.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 53.08%
+Dosya: test_1044.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 89.94%
+Dosya: test_1046.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.90%
+Dosya: test_1052.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 58.78%
+Dosya: test_1055.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 58.70%
+Dosya: test_1056.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 72.83%
+Dosya: test_1060.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 93.56%
+Dosya: test_1061.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.77%
+Dosya: test_1064.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.54%
+Dosya: test_1066.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.88%
+Dosya: test_1070.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.19%
+Dosya: test_1072.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 66.69%
+Dosya: test_1075.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 68.28%
+Dosya: test_1076.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.78%
+Dosya: test_1082.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 59.71%
+Dosya: test_1083.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.64%
+Dosya: test_1085.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 52.77%
+Dosya: test_1086.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.80%
+Dosya: test_1088.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 93.45%
+Dosya: test_1089.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.83%
+Dosya: test_1090.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.95%
+Dosya: test_1093.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.73%
+Dosya: test_1094.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 69.80%
+Dosya: test_1097.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.55%
+Dosya: test_1099.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.64%
+Dosya: test_1103.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 72.00%
+Dosya: test_1104.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.60%
+Dosya: test_1107.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.85%
+Dosya: test_1108.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.48%
+Dosya: test_1111.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.32%
+Dosya: test_1112.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.37%
+Dosya: test_1114.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 92.25%
+Dosya: test_1116.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 86.30%
+Dosya: test_1118.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 62.35%
+Dosya: test_1120.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 50.19%
+Dosya: test_1122.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.30%
+Dosya: test_1123.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 95.03%
+Dosya: test_1124.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.39%
+Dosya: test_1125.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.99%
+Dosya: test_1130.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.56%
+Dosya: test_1131.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.61%
+Dosya: test_1139.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.97%
+Dosya: test_1141.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 50.21%
+Dosya: test_1142.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 64.29%
+Dosya: test_1143.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.01%
+Dosya: test_1146.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.70%
+Dosya: test_1150.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 54.07%
+Dosya: test_1153.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 92.83%
+Dosya: test_1154.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 87.28%
+Dosya: test_1156.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 60.89%
+Dosya: test_1157.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 69.88%
+Dosya: test_1158.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 80.67%
+Dosya: test_1160.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 90.38%
+Dosya: test_1163.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.31%
+Dosya: test_1164.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 96.51%
+Dosya: test_1167.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 75.00%
+Dosya: test_1170.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 85.73%
+Dosya: test_1174.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 85.45%
+Dosya: test_1175.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 97.12%
+Dosya: test_1179.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 94.26%
+Dosya: test_1180.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.30%
+Dosya: test_1184.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.14%
+Dosya: test_1186.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 58.25%
+Dosya: test_1187.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 79.08%
+Dosya: test_1189.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 78.47%
+Dosya: test_1192.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 72.24%
+Dosya: test_1193.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.80%
+Dosya: test_1194.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.87%
+Dosya: test_1196.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.66%
+Dosya: test_1199.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 90.98%
+Dosya: test_1200.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 56.67%
+Dosya: test_1202.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 68.86%
+Dosya: test_1204.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 93.03%
+Dosya: test_1205.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 88.06%
+Dosya: test_1206.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 53.47%
+Dosya: test_1209.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 85.83%
+Dosya: test_1220.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 98.54%
+Dosya: test_1226.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.42%
+Dosya: test_1230.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.31%
+Dosya: test_1231.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.93%
+Dosya: test_1233.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 96.66%
+Dosya: test_1236.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.91%
+Dosya: test_1239.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 84.64%
+Dosya: test_1242.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 78.07%
+Dosya: test_1243.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 99.69%
+Dosya: test_1247.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 73.04%
+Dosya: test_1248.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.06%
+Dosya: test_1256.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 98.51%
+Dosya: test_1257.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 86.76%
+Dosya: test_1259.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 84.07%
+Dosya: test_1269.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 97.47%
+Dosya: test_1274.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 99.19%
+Dosya: test_1275.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 91.10%
+Dosya: test_1277.jpg, Gerçek: Orta, Tahmin: Hafif, Durum: Yanlış, Güven: 95.02%
+Dosya: test_1279.jpg, Gerçek: Orta, Tahmin: Orta, Durum: Doğru, Güven: 92.49%
