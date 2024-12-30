@@ -236,10 +236,12 @@ class BrainTumorDetector:
                 threshold = 0.3
                 has_tumor = predicted_class.item() == 1 and max_prob.item() > threshold
                 
-                # Isı haritası oluştur
+                # Isı haritası ve bounding box oluştur
                 heatmap = None
                 overlayed = None
+                bbox_image = None
                 if has_tumor:
+                    # Isı haritası oluştur
                     heatmap = self.grad_cam.generate_heatmap(image_tensor, predicted_class.item())
                     if heatmap is not None:
                         try:
@@ -273,21 +275,86 @@ class BrainTumorDetector:
                             # Görüntüleri birleştir
                             overlayed = cv2.addWeighted(original_bgr, 0.7, cv2.cvtColor(heatmap_colored, cv2.COLOR_RGB2BGR), 0.3, 0)
                             
+                            # Bounding box için görüntü hazırla
+                            bbox_image = original_bgr.copy()
+                            
+                            # Isı haritasını normalize et ve binary mask oluştur
+                            heatmap_norm = cv2.normalize(heatmap, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+                            _, binary = cv2.threshold(heatmap_norm, int(255 * 0.7), 255, cv2.THRESH_BINARY)
+                            
+                            # Gürültüyü temizle
+                            kernel = np.ones((5,5), np.uint8)
+                            binary = cv2.morphologyEx(binary, cv2.MORPH_CLOSE, kernel)
+                            binary = cv2.morphologyEx(binary, cv2.MORPH_OPEN, kernel)
+                            
+                            # Konturları bul
+                            contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                            
+                            if contours:
+                                # En büyük konturu bul
+                                largest_contour = max(contours, key=cv2.contourArea)
+                                
+                                # Kontur alanını hesapla
+                                area = cv2.contourArea(largest_contour)
+                                
+                                # Minimum alan kontrolü
+                                if area > 100:  # Minimum alan eşiği
+                                    # Konturun sınırlayıcı dikdörtgenini bul
+                                    x, y, w, h = cv2.boundingRect(largest_contour)
+                                    
+                                    # Bounding box çiz (kalın çizgi)
+                                    cv2.rectangle(bbox_image, (x, y), (x + w, y + h), (0, 255, 0), 3)
+                                    
+                                    # Etiket metni
+                                    label = f"Tümör ({max_prob.item()*100:.1f}%)"
+                                    
+                                    # Etiket arka planı için boyut hesapla
+                                    (label_width, label_height), _ = cv2.getTextSize(
+                                        label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2
+                                    )
+                                    
+                                    # Etiket konumunu ayarla
+                                    label_x = x
+                                    label_y = max(y - 10, label_height + 5)  # Görüntü sınırları içinde kalmasını sağla
+                                    
+                                    # Etiket arka planı
+                                    cv2.rectangle(
+                                        bbox_image,
+                                        (label_x, label_y - label_height - 5),
+                                        (label_x + label_width + 10, label_y + 5),
+                                        (0, 255, 0),
+                                        -1
+                                    )
+                                    
+                                    # Etiket metni
+                                    cv2.putText(
+                                        bbox_image,
+                                        label,
+                                        (label_x + 5, label_y),
+                                        cv2.FONT_HERSHEY_SIMPLEX,
+                                        0.7,
+                                        (0, 0, 0),
+                                        2
+                                    )
+                            
                             # Sonuçları RGB'ye geri dönüştür
                             overlayed = cv2.cvtColor(overlayed, cv2.COLOR_BGR2RGB)
+                            bbox_image = cv2.cvtColor(bbox_image, cv2.COLOR_BGR2RGB)
                             
                             # Görüntüleri base64'e dönüştür
                             _, heatmap_buffer = cv2.imencode('.png', heatmap_colored)
                             _, overlay_buffer = cv2.imencode('.png', overlayed)
+                            _, bbox_buffer = cv2.imencode('.png', bbox_image)
                             
                             heatmap_base64 = base64.b64encode(heatmap_buffer).decode('utf-8')
                             overlay_base64 = base64.b64encode(overlay_buffer).decode('utf-8')
+                            bbox_base64 = base64.b64encode(bbox_buffer).decode('utf-8')
                             
                         except Exception as e:
-                            print(f"Isı haritası oluşturma hatası: {str(e)}")
+                            print(f"Görselleştirme hatası: {str(e)}")
                             return {
                                 "success": False,
-                                "error": f"Isı haritası oluşturma hatası: {str(e)}"
+                                "error": f"Görselleştirme hatası: {str(e)}"
                             }
                 
                 # Tüm sınıfların olasılıklarını al
@@ -310,6 +377,7 @@ class BrainTumorDetector:
             if has_tumor and heatmap is not None:
                 result["heatmap"] = heatmap_base64
                 result["overlay"] = overlay_base64
+                result["bbox_image"] = bbox_base64
             
             return result
             

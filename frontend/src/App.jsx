@@ -89,6 +89,7 @@ function TabPanel({ children, value, index, ...other }) {
 const TumorVisualization = ({ imageUrl, result }) => {
   const [image] = useState(new window.Image());
   const [overlayImage] = useState(new window.Image());
+  const [bboxImage] = useState(new window.Image());
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const stageRef = useRef(null);
 
@@ -107,6 +108,11 @@ const TumorVisualization = ({ imageUrl, result }) => {
     if (result?.overlay) {
       overlayImage.src = `data:image/png;base64,${result.overlay}`;
     }
+    
+    // Eğer bounding box görüntüsü varsa, yükle
+    if (result?.bbox_image) {
+      bboxImage.src = `data:image/png;base64,${result.bbox_image}`;
+    }
   }, [imageUrl, result]);
 
   return (
@@ -116,29 +122,64 @@ const TumorVisualization = ({ imageUrl, result }) => {
           Tümör Görselleştirmesi
         </Typography>
         
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Stage
-            width={dimensions.width}
-            height={dimensions.height}
-            ref={stageRef}
-          >
-            <Layer>
-              {result?.overlay ? (
-                <KonvaImage
-                  image={overlayImage}
-                  width={dimensions.width}
-                  height={dimensions.height}
-                />
-              ) : (
-                <KonvaImage
-                  image={image}
-                  width={dimensions.width}
-                  height={dimensions.height}
-                />
-              )}
-            </Layer>
-          </Stage>
-        </Box>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <Typography variant="subtitle1" align="center" gutterBottom>
+              Isı Haritası
+            </Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Stage
+                width={dimensions.width}
+                height={dimensions.height}
+                ref={stageRef}
+              >
+                <Layer>
+                  {result?.overlay ? (
+                    <KonvaImage
+                      image={overlayImage}
+                      width={dimensions.width}
+                      height={dimensions.height}
+                    />
+                  ) : (
+                    <KonvaImage
+                      image={image}
+                      width={dimensions.width}
+                      height={dimensions.height}
+                    />
+                  )}
+                </Layer>
+              </Stage>
+            </Box>
+          </Grid>
+          
+          <Grid item xs={12} md={6}>
+            <Typography variant="subtitle1" align="center" gutterBottom>
+              Tümör Tespiti
+            </Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Stage
+                width={dimensions.width}
+                height={dimensions.height}
+              >
+                <Layer>
+                  {result?.bbox_image ? (
+                    <KonvaImage
+                      image={bboxImage}
+                      width={dimensions.width}
+                      height={dimensions.height}
+                    />
+                  ) : (
+                    <KonvaImage
+                      image={image}
+                      width={dimensions.width}
+                      height={dimensions.height}
+                    />
+                  )}
+                </Layer>
+              </Stage>
+            </Box>
+          </Grid>
+        </Grid>
         
         {result?.has_tumor && (
           <Typography variant="body2" color="error" align="center" sx={{ mt: 2 }}>
