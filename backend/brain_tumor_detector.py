@@ -302,39 +302,43 @@ class BrainTumorDetector:
                                     # Konturun sınırlayıcı dikdörtgenini bul
                                     x, y, w, h = cv2.boundingRect(largest_contour)
                                     
-                                    # Bounding box çiz (kalın çizgi)
-                                    cv2.rectangle(bbox_image, (x, y), (x + w, y + h), (0, 255, 0), 3)
+                                    # Box'ı sola doğru küçült
+                                    x = x + int(w * 0.1)  # X koordinatını sağa kaydır
+                                    w = int(w * 0.8)      # Genişliği azalt
+                                    
+                                    # Bounding box çiz (ince çizgi)
+                                    cv2.rectangle(bbox_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
                                     
                                     # Etiket metni
-                                    label = f"Tümör ({max_prob.item()*100:.1f}%)"
+                                    label = f"Brain Tumor /n ({max_prob.item()*100:.1f}%)"
                                     
                                     # Etiket arka planı için boyut hesapla
                                     (label_width, label_height), _ = cv2.getTextSize(
-                                        label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2
+                                        label, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 1
                                     )
                                     
                                     # Etiket konumunu ayarla
                                     label_x = x
-                                    label_y = max(y - 10, label_height + 5)  # Görüntü sınırları içinde kalmasını sağla
+                                    label_y = y - 10 if y - 10 > label_height else y + h + label_height + 10
                                     
                                     # Etiket arka planı
                                     cv2.rectangle(
                                         bbox_image,
                                         (label_x, label_y - label_height - 5),
-                                        (label_x + label_width + 10, label_y + 5),
+                                        (label_x + label_width + 5, label_y + 5),
                                         (0, 255, 0),
                                         -1
                                     )
                                     
-                                    # Etiket metni
+                                    # Etiket metni (daha ince ve okunaklı)
                                     cv2.putText(
                                         bbox_image,
                                         label,
-                                        (label_x + 5, label_y),
+                                        (label_x + 3, label_y),
                                         cv2.FONT_HERSHEY_SIMPLEX,
-                                        0.7,
+                                        0.6,
                                         (0, 0, 0),
-                                        2
+                                        1
                                     )
                             
                             # Sonuçları RGB'ye geri dönüştür
