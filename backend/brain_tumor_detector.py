@@ -58,12 +58,12 @@ class GradCAM:
                 cam = cam / cam.max()
                 
                 # Eşik değeri uygula (sadece yüksek aktivasyonları göster)
-                threshold = 0.5  # Eşik değerini artırdık
+                threshold = 0.7  # Eşik değerini daha da artırdık
                 cam[cam < threshold] = 0
                 
-                # Yumuşatma için Gaussian blur uygula
+                # Yumuşatma için Gaussian blur uygula (daha büyük kernel ve sigma)
                 cam = cam.numpy()
-                cam = cv2.GaussianBlur(cam, (5, 5), 0)
+                cam = cv2.GaussianBlur(cam, (7, 7), 1.5)
                 
                 return cam
             else:
@@ -72,6 +72,40 @@ class GradCAM:
         else:
             print("Hata: Çıktı tensörü gradyan hesaplaması için ayarlanmamış")
             return None
+
+    def create_custom_colormap(self, heatmap):
+        # Normalize edilmiş heatmap (0-1 arası)
+        heatmap_norm = cv2.normalize(heatmap, None, 0, 1, cv2.NORM_MINMAX)
+        
+        # 3 kanallı boş görüntü oluştur
+        colored = np.zeros((heatmap.shape[0], heatmap.shape[1], 3), dtype=np.float32)
+        
+        # Tümör bölgesi için mavi tonları (yüksek aktivasyon)
+        tumor_mask = heatmap_norm > 0.7  # Eşik değerini artırdık
+        non_tumor_mask = heatmap_norm <= 0.7
+        
+        # Tümör bölgesi (mavi tonları)
+        colored[tumor_mask, 0] = 0  # R
+        colored[tumor_mask, 1] = 0  # G
+        colored[tumor_mask, 2] = 1  # B (sabit mavi)
+        
+        # Tümör olmayan bölge (kırmızı tonları)
+        colored[non_tumor_mask, 0] = 0.8  # R (sabit kırmızı)
+        colored[non_tumor_mask, 1] = 0  # G
+        colored[non_tumor_mask, 2] = 0  # B
+        
+        # Yumuşak geçişler için Gaussian blur uygula
+        colored = cv2.GaussianBlur(colored, (3, 3), 0.5)
+        
+        # Opaklık maskesi oluştur
+        opacity = np.zeros((heatmap.shape[0], heatmap.shape[1]), dtype=np.float32)
+        opacity[tumor_mask] = 0.8  # Tümör bölgesi daha belirgin
+        opacity[non_tumor_mask] = 0.3  # Diğer bölgeler daha saydam
+        
+        # Opaklık maskesini uygula
+        colored = colored * opacity[:, :, np.newaxis]
+        
+        return np.uint8(colored * 255)
 
 class BrainTumorDetector:
     def __init__(self):
@@ -104,6 +138,40 @@ class BrainTumorDetector:
             print(f"Model yüklenirken hata: {str(e)}")
         
         self.model.eval()
+        
+    def create_custom_colormap(self, heatmap):
+        # Normalize edilmiş heatmap (0-1 arası)
+        heatmap_norm = cv2.normalize(heatmap, None, 0, 1, cv2.NORM_MINMAX)
+        
+        # 3 kanallı boş görüntü oluştur
+        colored = np.zeros((heatmap.shape[0], heatmap.shape[1], 3), dtype=np.float32)
+        
+        # Tümör bölgesi için mavi tonları (yüksek aktivasyon)
+        tumor_mask = heatmap_norm > 0.7  # Eşik değerini artırdık
+        non_tumor_mask = heatmap_norm <= 0.7
+        
+        # Tümör bölgesi (mavi tonları)
+        colored[tumor_mask, 0] = 0  # R
+        colored[tumor_mask, 1] = 0  # G
+        colored[tumor_mask, 2] = 1  # B (sabit mavi)
+        
+        # Tümör olmayan bölge (kırmızı tonları)
+        colored[non_tumor_mask, 0] = 0.8  # R (sabit kırmızı)
+        colored[non_tumor_mask, 1] = 0  # G
+        colored[non_tumor_mask, 2] = 0  # B
+        
+        # Yumuşak geçişler için Gaussian blur uygula
+        colored = cv2.GaussianBlur(colored, (3, 3), 0.5)
+        
+        # Opaklık maskesi oluştur
+        opacity = np.zeros((heatmap.shape[0], heatmap.shape[1]), dtype=np.float32)
+        opacity[tumor_mask] = 0.8  # Tümör bölgesi daha belirgin
+        opacity[non_tumor_mask] = 0.3  # Diğer bölgeler daha saydam
+        
+        # Opaklık maskesini uygula
+        colored = colored * opacity[:, :, np.newaxis]
+        
+        return np.uint8(colored * 255)
         
     def enhance_image(self, image_array):
         # Görüntüyü BGR'dan RGB'ye dönüştür
@@ -179,20 +247,22 @@ class BrainTumorDetector:
                             original_resized = cv2.resize(enhanced, (224, 224))
                             
                             # Isı haritasını hazırla
-                            heatmap = cv2.resize(heatmap, (224, 224))  # Boyutu eşitle
+                            heatmap = cv2.resize(heatmap, (224, 224))
                             
-                            # Morfolojik işlemler uygula (gürültüyü azalt ve bağlı bölgeleri birleştir)
-                            kernel = np.ones((5,5), np.uint8)
-                            heatmap = cv2.morphologyEx(heatmap, cv2.MORPH_CLOSE, kernel)
+                            # Morfolojik işlemler uygula
+                            kernel = np.ones((3,3), np.uint8)
                             heatmap = cv2.morphologyEx(heatmap, cv2.MORPH_OPEN, kernel)
+                            heatmap = cv2.morphologyEx(heatmap, cv2.MORPH_CLOSE, kernel)
                             
-                            # Eşik değeri uygula
-                            _, heatmap = cv2.threshold(heatmap, 0.5, 1.0, cv2.THRESH_BINARY)
+                            # Küçük bölgeleri temizle
+                            contours, _ = cv2.findContours(np.uint8(heatmap * 255), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                            min_area = 100  # Minimum alanı artırdık
+                            for cnt in contours:
+                                if cv2.contourArea(cnt) < min_area:
+                                    cv2.drawContours(heatmap, [cnt], -1, 0, -1)
                             
-                            heatmap_uint8 = np.uint8(255 * heatmap)
-                            
-                            # Isı haritasını 3 kanallı hale getir ve renklendir
-                            heatmap_colored = cv2.applyColorMap(heatmap_uint8, cv2.COLORMAP_JET)
+                            # Özel renk haritası uygula
+                            heatmap_colored = self.create_custom_colormap(heatmap)
                             
                             # Görüntüleri BGR formatına dönüştür
                             if len(original_resized.shape) == 3 and original_resized.shape[2] == 3:
@@ -200,15 +270,10 @@ class BrainTumorDetector:
                             else:
                                 original_bgr = cv2.cvtColor(original_resized, cv2.COLOR_GRAY2BGR)
                             
-                            # Debug bilgisi
-                            print(f"Original shape: {original_bgr.shape}")
-                            print(f"Heatmap shape: {heatmap_colored.shape}")
-                            
                             # Görüntüleri birleştir
-                            overlayed = cv2.addWeighted(original_bgr, 0.7, heatmap_colored, 0.3, 0)
+                            overlayed = cv2.addWeighted(original_bgr, 0.7, cv2.cvtColor(heatmap_colored, cv2.COLOR_RGB2BGR), 0.3, 0)
                             
                             # Sonuçları RGB'ye geri dönüştür
-                            heatmap_colored = cv2.cvtColor(heatmap_colored, cv2.COLOR_BGR2RGB)
                             overlayed = cv2.cvtColor(overlayed, cv2.COLOR_BGR2RGB)
                             
                             # Görüntüleri base64'e dönüştür

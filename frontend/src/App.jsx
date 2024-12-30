@@ -319,18 +319,24 @@ function App() {
   };
 
   const renderAnalysisResults = (result) => {
-    if (!result) return null;
+    if (!result || !result.success) {
+      return (
+        <Alert severity="error" sx={{ mt: 2 }}>
+          {result?.error || "Analiz sırasında bir hata oluştu."}
+        </Alert>
+      );
+    }
 
     if (selectedTab === 0) {  // Beyin Tümörü sonuçları
       const pieData = [
-        { name: 'Tümör', value: result.all_probabilities.tumor },
-        { name: 'Normal', value: result.all_probabilities.no_tumor }
+        { name: 'Tümör', value: result.all_probabilities?.tumor || 0 },
+        { name: 'Normal', value: result.all_probabilities?.no_tumor || 0 }
       ];
 
       const barData = [{
         name: 'Sonuç',
-        Tumor: result.all_probabilities.tumor * 100,
-        Normal: result.all_probabilities.no_tumor * 100
+        Tumor: (result.all_probabilities?.tumor || 0) * 100,
+        Normal: (result.all_probabilities?.no_tumor || 0) * 100
       }];
 
       const COLORS = ['#ff4444', '#4caf50'];
@@ -410,6 +416,14 @@ function App() {
         </Box>
       );
     } else if (selectedTab === 1) {  // Alzheimer sonuçları
+      if (!result.all_probabilities) {
+        return (
+          <Alert severity="error" sx={{ mt: 2 }}>
+            Alzheimer analiz sonuçları alınamadı.
+          </Alert>
+        );
+      }
+
       const pieData = Object.entries(result.all_probabilities).map(([name, value]) => ({
         name: name,
         value: value
