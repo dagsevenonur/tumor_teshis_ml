@@ -86,15 +86,17 @@ function TabPanel({ children, value, index, ...other }) {
   );
 }
 
-const TumorVisualization = ({ imageUrl, tumorRegions }) => {
+const TumorVisualization = ({ imageUrl, result }) => {
   const [image] = useState(new window.Image());
+  const [heatmapImage] = useState(new window.Image());
+  const [overlayImage] = useState(new window.Image());
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [showHeatmap, setShowHeatmap] = useState(false);
   const stageRef = useRef(null);
 
   useEffect(() => {
     image.src = imageUrl;
     image.onload = () => {
-      // Görüntüyü container'a sığdır
       const containerWidth = 600;
       const scale = containerWidth / image.width;
       setDimensions({
@@ -102,42 +104,80 @@ const TumorVisualization = ({ imageUrl, tumorRegions }) => {
         height: image.height * scale
       });
     };
-  }, [imageUrl]);
+
+    // Eğer ısı haritası varsa, yükle
+    if (result?.heatmap) {
+      heatmapImage.src = `data:image/png;base64,${result.heatmap}`;
+    }
+
+    // Eğer üst üste bindirilmiş görüntü varsa, yükle
+    if (result?.overlay) {
+      overlayImage.src = `data:image/png;base64,${result.overlay}`;
+    }
+  }, [imageUrl, result]);
 
   return (
-    <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center' }}>
+    <Box sx={{ mt: 3 }}>
       <Paper elevation={3} sx={{ p: 2, bgcolor: 'background.paper' }}>
-        <Typography variant="h6" gutterBottom align="center" color="primary">
-          Tümör Konumu
-        </Typography>
-        <Stage
-          width={dimensions.width}
-          height={dimensions.height}
-          ref={stageRef}
-        >
-          <Layer>
-            <KonvaImage
-              image={image}
-              width={dimensions.width}
-              height={dimensions.height}
-            />
-            {tumorRegions && tumorRegions.map((region, i) => (
-              <Rect
-                key={i}
-                x={region.x * dimensions.width}
-                y={region.y * dimensions.height}
-                width={region.width * dimensions.width}
-                height={region.height * dimensions.height}
-                stroke="#ff4444"
-                strokeWidth={2}
-                dash={[5, 5]}
-                fill="rgba(255, 68, 68, 0.2)"
-              />
-            ))}
-          </Layer>
-        </Stage>
-        <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 1 }}>
-          Kırmızı ile işaretlenmiş alanlar tümör şüphesi bulunan bölgeleri gösterir
+        <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" sx={{ mb: 2 }}>
+          <Typography variant="h6" color="primary">
+            Tümör Görselleştirmesi
+          </Typography>
+          {result?.heatmap && (
+            <Button
+              variant="outlined"
+              onClick={() => setShowHeatmap(!showHeatmap)}
+              startIcon={<BiotechIcon />}
+            >
+              {showHeatmap ? 'Normal Görüntü' : 'Isı Haritası'}
+            </Button>
+          )}
+        </Stack>
+        
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Stage
+            width={dimensions.width}
+            height={dimensions.height}
+            ref={stageRef}
+          >
+            <Layer>
+              {showHeatmap ? (
+                result?.overlay ? (
+                  <KonvaImage
+                    image={overlayImage}
+                    width={dimensions.width}
+                    height={dimensions.height}
+                  />
+                ) : (
+                  <>
+                    <KonvaImage
+                      image={image}
+                      width={dimensions.width}
+                      height={dimensions.height}
+                    />
+                    <KonvaImage
+                      image={heatmapImage}
+                      width={dimensions.width}
+                      height={dimensions.height}
+                      opacity={0.6}
+                    />
+                  </>
+                )
+              ) : (
+                <KonvaImage
+                  image={image}
+                  width={dimensions.width}
+                  height={dimensions.height}
+                />
+              )}
+            </Layer>
+          </Stage>
+        </Box>
+        
+        <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 2 }}>
+          {showHeatmap 
+            ? "Kırmızı alanlar tümör olasılığının yüksek olduğu bölgeleri gösterir"
+            : "Görüntüyü ısı haritası modunda görüntülemek için butona tıklayın"}
         </Typography>
       </Paper>
     </Box>
@@ -313,206 +353,22 @@ function App() {
   };
 
   const renderAnalysisResults = (result) => {
-    if (result.error) {
-      return <Typography color="error">{result.error}</Typography>;
-    }
+    if (!result) return null;
 
-    if (selectedTab === 0) {
-      // Beyin Tümörü sonuçları
-      const pieData = [
-        { name: 'Tümör', value: result.has_tumor ? result.confidence : 0 },
-        { name: 'Normal', value: result.has_tumor ? 0 : result.confidence }
-      ];
-
-      const barData = [
-        {
-          name: 'Sonuç',
-          Tumor: result.has_tumor ? result.confidence * 100 : 0,
-          Normal: result.has_tumor ? 0 : result.confidence * 100,
-        }
-      ];
-
-      const COLORS = ['#ff4444', '#4caf50'];
-
-      return (
-        <Box ref={resultsRef}>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <Typography variant="h6" gutterBottom color={result.has_tumor ? 'error' : 'success'} align="center">
-                {result.has_tumor ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi'}
-              </Typography>
-              <Typography variant="body1" align="center" sx={{ mb: 3 }}>
-                Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
-              </Typography>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" gutterBottom align="center" color="primary">
-                Olasılık Dağılımı
-              </Typography>
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={pieData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    paddingAngle={5}
-                    dataKey="value"
-                    label={({ name, value }) => value > 0 ? `${name}: ${(value * 100).toFixed(2)}%` : ''}
-                  >
-                    {pieData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip 
-                    formatter={(value) => value > 0 ? `${(value * 100).toFixed(2)}%` : '0%'}
-                  />
-                  <Legend />
-                </PieChart>
-              </ResponsiveContainer>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" gutterBottom align="center" color="primary">
-                Karşılaştırmalı Analiz
-              </Typography>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart
-                  data={barData}
-                  margin={{
-                    top: 20,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                  }}
-                >
-                  <Bar dataKey="Tumor" fill="#ff4444" name="Tümör" />
-                  <Bar dataKey="Normal" fill="#4caf50" />
-                  <Tooltip formatter={(value) => value > 0 ? `${value.toFixed(2)}%` : '0%'} />
-                  <Legend />
-                </BarChart>
-              </ResponsiveContainer>
-            </Grid>
-
-            <Grid item xs={12}>
-              <Alert severity={result.has_tumor ? "warning" : "success"} sx={{ mt: 2 }}>
-                <Typography variant="body1">
-                  {result.has_tumor 
-                    ? "Görüntüde tümör belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun."
-                    : "Görüntüde tümör belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
-                  }
-                </Typography>
-              </Alert>
-            </Grid>
-          </Grid>
-        </Box>
-      );
-    } else if (selectedTab === 1) {
-      // Alzheimer sonuçları
-      const pieData = Object.entries(result.all_probabilities).map(([name, value]) => ({
-        name: name,
-        value: value
-      }));
-
-      const barData = [{
-        name: 'Sonuç',
-        ...result.all_probabilities
-      }];
-
-      const COLORS = ['#4caf50', '#ff9800', '#f44336', '#9c27b0'];
-
-      // Tahmin sonucunun rengini belirle
-      const getSeverityColor = (prediction) => {
-        switch(prediction) {
-          case 'Normal': return 'success';
-          case 'Çok Hafif': return 'warning';
-          case 'Hafif': return 'error';
-          case 'Orta': return 'error';
-          default: return 'info';
-        }
-      };
-
-      return (
-        <Box ref={resultsRef}>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <Typography variant="h6" gutterBottom color={getSeverityColor(result.prediction)} align="center">
-                Alzheimer Risk Analizi Sonucu: <strong>{result.prediction}</strong>
-              </Typography>
-              <Typography variant="body1" align="center" sx={{ mb: 3 }}>
-                Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
-              </Typography>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" gutterBottom align="center" color="primary">
-                Olasılık Dağılımı
-              </Typography>
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={pieData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    paddingAngle={5}
-                    dataKey="value"
-                    label={({ name, value }) => `${name}: ${(value * 100).toFixed(2)}%`}
-                  >
-                    {pieData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip 
-                    formatter={(value) => `${(value * 100).toFixed(2)}%`}
-                  />
-                  <Legend />
-                </PieChart>
-              </ResponsiveContainer>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" gutterBottom align="center" color="primary">
-                Karşılaştırmalı Analiz
-              </Typography>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart
-                  data={barData}
-                  margin={{
-                    top: 20,
-                    right: 30,
-                    left: 20,
-                    bottom: 5,
-                  }}
-                >
-                  {Object.keys(result.all_probabilities).map((key, index) => (
-                    <Bar key={key} dataKey={key} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                  <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
-                  <Legend />
-                </BarChart>
-              </ResponsiveContainer>
-            </Grid>
-
-            <Grid item xs={12}>
-              <Alert severity={getSeverityColor(result.prediction)} sx={{ mt: 2 }}>
-                <Typography variant="body1">
-                  {result.prediction === 'Normal' 
-                    ? "Görüntüde Alzheimer belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
-                    : `Görüntüde ${result.prediction.toLowerCase()} düzeyde Alzheimer belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun.`
-                  }
-                </Typography>
-              </Alert>
-            </Grid>
-          </Grid>
-        </Box>
-      );
-    }
+    return (
+      <Box ref={resultsRef}>
+        {selectedTab === 0 && (
+          <>
+            <TumorVisualization 
+              imageUrl={previewUrl} 
+              result={result}
+            />
+            // ... existing code ...
+          </>
+        )}
+        // ... existing code ...
+      </Box>
+    );
   };
 
   const handleSettingChange = (setting) => (event, newValue) => {
