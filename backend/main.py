@@ -1,6 +1,7 @@
-from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import os
+import tempfile
 from brain_tumor_detector import BrainTumorDetector
 from alzheimer_detector import AlzheimerDetector
 
@@ -15,52 +16,58 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-def read_root():
-    return {"message": "Beyin MR Görüntü Analiz API'sine Hoş Geldiniz"}
+# Dedektör nesnelerini oluştur
+tumor_detector = BrainTumorDetector()
+alzheimer_detector = AlzheimerDetector()
 
 @app.post("/analyze/tumor")
 async def analyze_tumor(file: UploadFile = File(...)):
+    temp_file = None
     try:
         # Geçici dosya oluştur
-        temp_path = f"temp_{file.filename}"
-        with open(temp_path, "wb") as buffer:
-            content = await file.read()
-            buffer.write(content)
+        temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(file.filename)[1])
+        content = await file.read()
+        temp_file.write(content)
+        temp_file.close()  # Dosyayı kapat
         
-        # Beyin tümörü analizi yap
-        detector = BrainTumorDetector()
-        result = detector.detect(temp_path)
+        # Analiz yap
+        result = tumor_detector.detect(temp_file.name)
         
-        # Geçici dosyayı sil
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
-            
         return result
     except Exception as e:
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
-        raise HTTPException(status_code=500, detail=str(e))
+        return {"success": False, "error": str(e)}
+    finally:
+        # Geçici dosyayı temizle
+        if temp_file is not None:
+            try:
+                os.unlink(temp_file.name)
+            except Exception as e:
+                print(f"Geçici dosya silinirken hata oluştu: {str(e)}")
 
 @app.post("/analyze/alzheimer")
 async def analyze_alzheimer(file: UploadFile = File(...)):
+    temp_file = None
     try:
         # Geçici dosya oluştur
-        temp_path = f"temp_{file.filename}"
-        with open(temp_path, "wb") as buffer:
-            content = await file.read()
-            buffer.write(content)
+        temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=os.path.splitext(file.filename)[1])
+        content = await file.read()
+        temp_file.write(content)
+        temp_file.close()  # Dosyayı kapat
         
-        # Alzheimer analizi yap
-        detector = AlzheimerDetector()
-        result = detector.predict(temp_path)
+        # Analiz yap
+        result = alzheimer_detector.detect(temp_file.name)
         
-        # Geçici dosyayı sil
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
-            
         return result
     except Exception as e:
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
-        raise HTTPException(status_code=500, detail=str(e)) 
+        return {"success": False, "error": str(e)}
+    finally:
+        # Geçici dosyayı temizle
+        if temp_file is not None:
+            try:
+                os.unlink(temp_file.name)
+            except Exception as e:
+                print(f"Geçici dosya silinirken hata oluştu: {str(e)}")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000) 
