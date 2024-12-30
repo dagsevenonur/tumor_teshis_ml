@@ -310,7 +310,7 @@ class BrainTumorDetector:
                                     cv2.rectangle(bbox_image, (x, y), (x + w, y + h), (0, 255, 0), 2)
                                     
                                     # Etiket metni
-                                    label = f"Brain Tumor /n ({max_prob.item()*100:.1f}%)"
+                                    label = f"Tumor"
                                     
                                     # Etiket arka planı için boyut hesapla
                                     (label_width, label_height), _ = cv2.getTextSize(

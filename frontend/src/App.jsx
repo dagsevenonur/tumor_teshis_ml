@@ -118,74 +118,48 @@ const TumorVisualization = ({ imageUrl, result }) => {
   return (
     <Box sx={{ mt: 3 }}>
       <Paper elevation={3} sx={{ p: 2, bgcolor: 'background.paper' }}>
-        <Typography variant="h6" color="primary" align="center" gutterBottom>
+        <Typography variant="h5" align="center" gutterBottom>
           Tümör Görselleştirmesi
         </Typography>
-        
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
-            <Typography variant="subtitle1" align="center" gutterBottom>
-              Isı Haritası
-            </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-              <Stage
-                width={dimensions.width}
-                height={dimensions.height}
-                ref={stageRef}
-              >
-                <Layer>
-                  {result?.overlay ? (
-                    <KonvaImage
-                      image={overlayImage}
-                      width={dimensions.width}
-                      height={dimensions.height}
-                    />
-                  ) : (
-                    <KonvaImage
-                      image={image}
-                      width={dimensions.width}
-                      height={dimensions.height}
-                    />
-                  )}
-                </Layer>
-              </Stage>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center', width: '100%' }}>
+          <Box sx={{ width: '80%', maxWidth: '800px' }}>
+            <Typography variant="subtitle1" align="center" sx={{ mb: 1 }}>Isı Haritası</Typography>
+            <Box sx={{ 
+              width: '100%', 
+              display: 'flex', 
+              justifyContent: 'center',
+              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+              borderRadius: '8px',
+              overflow: 'hidden'
+            }}>
+              <img 
+                src={`data:image/png;base64,${result?.overlay ? result.overlay : imageUrl}`} 
+                alt="Tümör Isı Haritası" 
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
             </Box>
-          </Grid>
-          
-          <Grid item xs={12} md={6}>
-            <Typography variant="subtitle1" align="center" gutterBottom>
-              Tümör Tespiti
+            <Typography variant="caption" align="center" display="block" sx={{ mt: 1 }}>
+              Kırmızı alanlar tümör olasılığının yüksek olduğu bölgeleri gösterir
             </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-              <Stage
-                width={dimensions.width}
-                height={dimensions.height}
-              >
-                <Layer>
-                  {result?.bbox_image ? (
-                    <KonvaImage
-                      image={bboxImage}
-                      width={dimensions.width}
-                      height={dimensions.height}
-                    />
-                  ) : (
-                    <KonvaImage
-                      image={image}
-                      width={dimensions.width}
-                      height={dimensions.height}
-                    />
-                  )}
-                </Layer>
-              </Stage>
+          </Box>
+          <Box sx={{ width: '80%', maxWidth: '800px' }}>
+            <Typography variant="subtitle1" align="center" sx={{ mb: 1 }}>Tümör Tespiti</Typography>
+            <Box sx={{ 
+              width: '100%', 
+              display: 'flex', 
+              justifyContent: 'center',
+              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+              borderRadius: '8px',
+              overflow: 'hidden'
+            }}>
+              <img 
+                src={`data:image/png;base64,${result?.bbox_image ? result.bbox_image : imageUrl}`} 
+                alt="Tümör Tespiti" 
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
             </Box>
-          </Grid>
-        </Grid>
-        
-        {result?.has_tumor && (
-          <Typography variant="body2" color="error" align="center" sx={{ mt: 2 }}>
-            Kırmızı alanlar tümör olasılığının yüksek olduğu bölgeleri gösterir
-          </Typography>
-        )}
+          </Box>
+        </Box>
       </Paper>
     </Box>
   );
