@@ -37,20 +37,20 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import TableViewIcon from '@mui/icons-material/TableView';
 
-const DropzoneArea = styled(Box)(({ isDragActive, hasFile }) => ({
+const DropzoneArea = styled(Box)(({ theme, isDragActive, hasFile }) => ({
   border: '2px dashed',
-  borderColor: isDragActive ? '#1976d2' : hasFile ? '#4caf50' : '#ccc',
-  borderRadius: '8px',
-  padding: '40px 20px',
+  borderColor: isDragActive ? theme.palette.primary.main : hasFile ? theme.palette.success.main : theme.palette.grey[400],
+  borderRadius: theme.shape.borderRadius,
+  padding: theme.spacing(3),
   textAlign: 'center',
-  backgroundColor: isDragActive ? 'rgba(25, 118, 210, 0.08)' : hasFile ? 'rgba(76, 175, 80, 0.08)' : '#fafafa',
+  backgroundColor: isDragActive ? theme.palette.action.hover : hasFile ? theme.palette.success.light : theme.palette.grey[50],
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   maxHeight: '600px',
   overflow: 'auto',
   '&:hover': {
-    borderColor: '#1976d2',
-    backgroundColor: 'rgba(25, 118, 210, 0.08)'
+    borderColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.action.hover
   }
 }));
 
@@ -355,20 +355,178 @@ function App() {
   const renderAnalysisResults = (result) => {
     if (!result) return null;
 
-    return (
-      <Box ref={resultsRef}>
-        {selectedTab === 0 && (
-          <>
-            <TumorVisualization 
-              imageUrl={previewUrl} 
-              result={result}
-            />
-            // ... existing code ...
-          </>
-        )}
-        // ... existing code ...
-      </Box>
-    );
+    if (selectedTab === 0) {  // Beyin Tümörü sonuçları
+      const pieData = [
+        { name: 'Tümör', value: result.all_probabilities.tumor },
+        { name: 'Normal', value: result.all_probabilities.no_tumor }
+      ];
+
+      const barData = [{
+        name: 'Sonuç',
+        Tumor: result.all_probabilities.tumor * 100,
+        Normal: result.all_probabilities.no_tumor * 100
+      }];
+
+      const COLORS = ['#ff4444', '#4caf50'];
+
+      return (
+        <Box ref={resultsRef}>
+          <TumorVisualization 
+            imageUrl={previewUrl} 
+            result={result}
+          />
+          
+          <Grid container spacing={3} sx={{ mt: 2 }}>
+            <Grid item xs={12}>
+              <Typography variant="h6" gutterBottom color={result.has_tumor ? 'error' : 'success'} align="center">
+                {result.has_tumor ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi'}
+              </Typography>
+              <Typography variant="body1" align="center" sx={{ mb: 3 }}>
+                Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
+              </Typography>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" gutterBottom align="center" color="primary">
+                Olasılık Dağılımı
+              </Typography>
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    paddingAngle={5}
+                    dataKey="value"
+                    label={({ name, value }) => `${name}: ${(value * 100).toFixed(2)}%`}
+                  >
+                    {pieData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" gutterBottom align="center" color="primary">
+                Karşılaştırmalı Analiz
+              </Typography>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart
+                  data={barData}
+                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                >
+                  <Bar dataKey="Tumor" fill="#ff4444" name="Tümör" />
+                  <Bar dataKey="Normal" fill="#4caf50" />
+                  <Tooltip formatter={(value) => `${value.toFixed(2)}%`} />
+                  <Legend />
+                </BarChart>
+              </ResponsiveContainer>
+            </Grid>
+
+            <Grid item xs={12}>
+              <Alert severity={result.has_tumor ? "warning" : "success"} sx={{ mt: 2 }}>
+                <Typography variant="body1">
+                  {result.has_tumor 
+                    ? "Görüntüde tümör belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun."
+                    : "Görüntüde tümör belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
+                  }
+                </Typography>
+              </Alert>
+            </Grid>
+          </Grid>
+        </Box>
+      );
+    } else if (selectedTab === 1) {  // Alzheimer sonuçları
+      const pieData = Object.entries(result.all_probabilities).map(([name, value]) => ({
+        name: name,
+        value: value
+      }));
+
+      const barData = [{
+        name: 'Sonuç',
+        ...result.all_probabilities
+      }];
+
+      const COLORS = ['#4caf50', '#ff9800', '#f44336', '#9c27b0'];
+
+      return (
+        <Box ref={resultsRef}>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <Typography variant="h6" gutterBottom color="primary" align="center">
+                Alzheimer Risk Analizi Sonucu: <strong>{result.prediction}</strong>
+              </Typography>
+              <Typography variant="body1" align="center" sx={{ mb: 3 }}>
+                Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
+              </Typography>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" gutterBottom align="center" color="primary">
+                Olasılık Dağılımı
+              </Typography>
+              <ResponsiveContainer width="100%" height={300}>
+                <PieChart>
+                  <Pie
+                    data={pieData}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    paddingAngle={5}
+                    dataKey="value"
+                    label={({ name, value }) => `${name}: ${(value * 100).toFixed(2)}%`}
+                  >
+                    {pieData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Typography variant="h6" gutterBottom align="center" color="primary">
+                Karşılaştırmalı Analiz
+              </Typography>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart
+                  data={barData}
+                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                >
+                  {Object.keys(result.all_probabilities).map((key, index) => (
+                    <Bar key={key} dataKey={key} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                  <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
+                  <Legend />
+                </BarChart>
+              </ResponsiveContainer>
+            </Grid>
+
+            <Grid item xs={12}>
+              <Alert severity={result.prediction === 'Normal' ? "success" : "warning"} sx={{ mt: 2 }}>
+                <Typography variant="body1">
+                  {result.prediction === 'Normal' 
+                    ? "Görüntüde Alzheimer belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
+                    : `Görüntüde ${result.prediction.toLowerCase()} düzeyde Alzheimer belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun.`
+                  }
+                </Typography>
+              </Alert>
+            </Grid>
+          </Grid>
+        </Box>
+      );
+    }
   };
 
   const handleSettingChange = (setting) => (event, newValue) => {
@@ -435,7 +593,20 @@ function App() {
                   </Typography>
                 </Alert>
 
-                <DropzoneArea {...getRootProps()} isDragActive={isDragActive} hasFile={!!selectedFile}>
+                <DropzoneArea
+                  {...getRootProps()}
+                  isDragActive={isDragActive}
+                  hasFile={!!selectedFile}
+                  sx={{
+                    border: '2px dashed',
+                    borderColor: isDragActive ? 'primary.main' : selectedFile ? 'success.main' : 'grey.400',
+                    borderRadius: 2,
+                    p: 3,
+                    textAlign: 'center',
+                    bgcolor: isDragActive ? 'action.hover' : selectedFile ? 'success.light' : 'grey.50',
+                    cursor: 'pointer'
+                  }}
+                >
                   <input {...getInputProps()} />
                   <CloudUploadIcon sx={{ fontSize: 48, color: isDragActive ? 'primary.main' : 'text.secondary', mb: 2 }} />
                   {!selectedFile ? (
