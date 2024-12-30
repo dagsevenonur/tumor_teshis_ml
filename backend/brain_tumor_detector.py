@@ -51,10 +51,24 @@ class GradCAM:
             
             # ReLU uygula ve normalize et
             cam = torch.maximum(cam, torch.tensor(0))
-            cam = cam - cam.min()
-            cam = cam / (cam.max() + 1e-7)  # Sıfıra bölünmeyi önlemek için epsilon ekle
             
-            return cam.numpy()
+            # Min-max normalizasyonu
+            if cam.max() > 0:
+                cam = cam - cam.min()
+                cam = cam / cam.max()
+                
+                # Eşik değeri uygula (sadece yüksek aktivasyonları göster)
+                threshold = 0.5  # Eşik değerini artırdık
+                cam[cam < threshold] = 0
+                
+                # Yumuşatma için Gaussian blur uygula
+                cam = cam.numpy()
+                cam = cv2.GaussianBlur(cam, (5, 5), 0)
+                
+                return cam
+            else:
+                print("Aktivasyon haritası oluşturulamadı")
+                return None
         else:
             print("Hata: Çıktı tensörü gradyan hesaplaması için ayarlanmamış")
             return None
@@ -166,6 +180,15 @@ class BrainTumorDetector:
                             
                             # Isı haritasını hazırla
                             heatmap = cv2.resize(heatmap, (224, 224))  # Boyutu eşitle
+                            
+                            # Morfolojik işlemler uygula (gürültüyü azalt ve bağlı bölgeleri birleştir)
+                            kernel = np.ones((5,5), np.uint8)
+                            heatmap = cv2.morphologyEx(heatmap, cv2.MORPH_CLOSE, kernel)
+                            heatmap = cv2.morphologyEx(heatmap, cv2.MORPH_OPEN, kernel)
+                            
+                            # Eşik değeri uygula
+                            _, heatmap = cv2.threshold(heatmap, 0.5, 1.0, cv2.THRESH_BINARY)
+                            
                             heatmap_uint8 = np.uint8(255 * heatmap)
                             
                             # Isı haritasını 3 kanallı hale getir ve renklendir
@@ -187,6 +210,13 @@ class BrainTumorDetector:
                             # Sonuçları RGB'ye geri dönüştür
                             heatmap_colored = cv2.cvtColor(heatmap_colored, cv2.COLOR_BGR2RGB)
                             overlayed = cv2.cvtColor(overlayed, cv2.COLOR_BGR2RGB)
+                            
+                            # Görüntüleri base64'e dönüştür
+                            _, heatmap_buffer = cv2.imencode('.png', heatmap_colored)
+                            _, overlay_buffer = cv2.imencode('.png', overlayed)
+                            
+                            heatmap_base64 = base64.b64encode(heatmap_buffer).decode('utf-8')
+                            overlay_base64 = base64.b64encode(overlay_buffer).decode('utf-8')
                             
                         except Exception as e:
                             print(f"Isı haritası oluşturma hatası: {str(e)}")
@@ -212,20 +242,9 @@ class BrainTumorDetector:
                 "success": True
             }
             
-            if has_tumor and heatmap is not None and overlayed is not None:
-                try:
-                    # Görüntüleri PNG formatında kodla ve base64'e dönüştür
-                    _, heatmap_buffer = cv2.imencode('.png', heatmap_colored)
-                    _, overlay_buffer = cv2.imencode('.png', overlayed)
-                    
-                    # Base64 kodlaması yap
-                    heatmap_base64 = base64.b64encode(heatmap_buffer).decode('utf-8')
-                    overlay_base64 = base64.b64encode(overlay_buffer).decode('utf-8')
-                    
-                    result["heatmap"] = heatmap_base64
-                    result["overlay"] = overlay_base64
-                except Exception as e:
-                    print(f"Görüntü kodlama hatası: {str(e)}")
+            if has_tumor and heatmap is not None:
+                result["heatmap"] = heatmap_base64
+                result["overlay"] = overlay_base64
             
             return result
             

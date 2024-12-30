@@ -37,13 +37,13 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import TableViewIcon from '@mui/icons-material/TableView';
 
-const DropzoneArea = styled(Box)(({ theme, isDragActive, hasFile }) => ({
+const StyledDropzoneArea = styled('div')(({ theme, isDragActive, hasFile }) => ({
   border: '2px dashed',
-  borderColor: isDragActive ? theme.palette.primary.main : hasFile ? theme.palette.success.main : theme.palette.grey[400],
+  borderColor: isDragActive ? theme.palette.primary.main : theme.palette.grey[400],
   borderRadius: theme.shape.borderRadius,
   padding: theme.spacing(3),
   textAlign: 'center',
-  backgroundColor: isDragActive ? theme.palette.action.hover : hasFile ? theme.palette.success.light : theme.palette.grey[50],
+  backgroundColor: isDragActive ? theme.palette.action.hover : theme.palette.grey[50],
   cursor: 'pointer',
   transition: 'all 0.3s ease',
   maxHeight: '600px',
@@ -88,10 +88,8 @@ function TabPanel({ children, value, index, ...other }) {
 
 const TumorVisualization = ({ imageUrl, result }) => {
   const [image] = useState(new window.Image());
-  const [heatmapImage] = useState(new window.Image());
   const [overlayImage] = useState(new window.Image());
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [showHeatmap, setShowHeatmap] = useState(false);
   const stageRef = useRef(null);
 
   useEffect(() => {
@@ -105,11 +103,6 @@ const TumorVisualization = ({ imageUrl, result }) => {
       });
     };
 
-    // Eğer ısı haritası varsa, yükle
-    if (result?.heatmap) {
-      heatmapImage.src = `data:image/png;base64,${result.heatmap}`;
-    }
-
     // Eğer üst üste bindirilmiş görüntü varsa, yükle
     if (result?.overlay) {
       overlayImage.src = `data:image/png;base64,${result.overlay}`;
@@ -119,20 +112,9 @@ const TumorVisualization = ({ imageUrl, result }) => {
   return (
     <Box sx={{ mt: 3 }}>
       <Paper elevation={3} sx={{ p: 2, bgcolor: 'background.paper' }}>
-        <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" sx={{ mb: 2 }}>
-          <Typography variant="h6" color="primary">
-            Tümör Görselleştirmesi
-          </Typography>
-          {result?.heatmap && (
-            <Button
-              variant="outlined"
-              onClick={() => setShowHeatmap(!showHeatmap)}
-              startIcon={<BiotechIcon />}
-            >
-              {showHeatmap ? 'Normal Görüntü' : 'Isı Haritası'}
-            </Button>
-          )}
-        </Stack>
+        <Typography variant="h6" color="primary" align="center" gutterBottom>
+          Tümör Görselleştirmesi
+        </Typography>
         
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Stage
@@ -141,28 +123,12 @@ const TumorVisualization = ({ imageUrl, result }) => {
             ref={stageRef}
           >
             <Layer>
-              {showHeatmap ? (
-                result?.overlay ? (
-                  <KonvaImage
-                    image={overlayImage}
-                    width={dimensions.width}
-                    height={dimensions.height}
-                  />
-                ) : (
-                  <>
-                    <KonvaImage
-                      image={image}
-                      width={dimensions.width}
-                      height={dimensions.height}
-                    />
-                    <KonvaImage
-                      image={heatmapImage}
-                      width={dimensions.width}
-                      height={dimensions.height}
-                      opacity={0.6}
-                    />
-                  </>
-                )
+              {result?.overlay ? (
+                <KonvaImage
+                  image={overlayImage}
+                  width={dimensions.width}
+                  height={dimensions.height}
+                />
               ) : (
                 <KonvaImage
                   image={image}
@@ -174,11 +140,11 @@ const TumorVisualization = ({ imageUrl, result }) => {
           </Stage>
         </Box>
         
-        <Typography variant="body2" color="text.secondary" align="center" sx={{ mt: 2 }}>
-          {showHeatmap 
-            ? "Kırmızı alanlar tümör olasılığının yüksek olduğu bölgeleri gösterir"
-            : "Görüntüyü ısı haritası modunda görüntülemek için butona tıklayın"}
-        </Typography>
+        {result?.has_tumor && (
+          <Typography variant="body2" color="error" align="center" sx={{ mt: 2 }}>
+            Kırmızı alanlar tümör olasılığının yüksek olduğu bölgeleri gösterir
+          </Typography>
+        )}
       </Paper>
     </Box>
   );
@@ -593,19 +559,10 @@ function App() {
                   </Typography>
                 </Alert>
 
-                <DropzoneArea
+                <StyledDropzoneArea
                   {...getRootProps()}
                   isDragActive={isDragActive}
                   hasFile={!!selectedFile}
-                  sx={{
-                    border: '2px dashed',
-                    borderColor: isDragActive ? 'primary.main' : selectedFile ? 'success.main' : 'grey.400',
-                    borderRadius: 2,
-                    p: 3,
-                    textAlign: 'center',
-                    bgcolor: isDragActive ? 'action.hover' : selectedFile ? 'success.light' : 'grey.50',
-                    cursor: 'pointer'
-                  }}
                 >
                   <input {...getInputProps()} />
                   <CloudUploadIcon sx={{ fontSize: 48, color: isDragActive ? 'primary.main' : 'text.secondary', mb: 2 }} />
@@ -650,7 +607,7 @@ function App() {
                       </IconButton>
                     </Box>
                   )}
-                </DropzoneArea>
+                </StyledDropzoneArea>
 
                 {selectedFile && (
                   <Box sx={{ mt: 3, textAlign: 'center' }}>
