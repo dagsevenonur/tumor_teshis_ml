@@ -1,4 +1,4 @@
-# MedVision: Beyin MR Görüntülerinde Tümör ve Alzheimer Tespiti için Yapay Zeka Destekli Analiz Sistemi
+# MedVision: Makine Öğrenmesi ile Tümör ve Alzheimer Tespiti için Yapay Zeka Destekli Analiz Sistemi
 
 Bu proje, ResNet50 derin öğrenme modeli ve makine öğrenmesi teknolojilerini kullanarak beyin MR görüntülerinde tümör tespiti ve Alzheimer hastalığı analizi yapabilen kapsamlı bir web tabanlı uygulamadır.
 
