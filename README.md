@@ -1,4 +1,4 @@
-# MedVision: Makine Öğrenmesi ile Tümör ve Alzheimer Tespiti için Yapay Zeka Destekli Analiz Sistemi
+# Makine Öğrenmesi ile Tümör ve Alzheimer Tespiti için Yapay Zeka Destekli Analiz Sistemi
 
 Bu proje, ResNet50 derin öğrenme modeli ve makine öğrenmesi teknolojilerini kullanarak beyin MR görüntülerinde tümör tespiti ve Alzheimer hastalığı analizi yapabilen kapsamlı bir web tabanlı uygulamadır.
 
@@ -211,6 +211,7 @@ Proje ile ilgili sorularınız için:
 2. Yeni bir branch oluşturun
 3. Değişikliklerinizi commit edin
 4. Branch'inizi push edin
+<<<<<<< HEAD
 5. Pull request oluşturun
 
 ## Kullanılan Kaynaklar
@@ -234,3 +235,6 @@ Proje ile ilgili sorularınız için:
 - [Brain Tumor Detection Using Convolutional Neural Networks](https://www.sciencedirect.com/science/article/pii/S1877050920307924)
 - [Deep Learning for Alzheimer's Disease Detection](https://www.frontiersin.org/articles/10.3389/fnagi.2020.00184/full)
 - [Medical Image Analysis using Deep Learning](https://www.nature.com/articles/s41598-019-42557-4) 
+=======
+5. Pull request oluşturun 
+>>>>>>> 950c3e4213a65ccd33c277a8e0a00f8d2dab71c4
