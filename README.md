@@ -211,4 +211,26 @@ Proje ile ilgili sorularınız için:
 2. Yeni bir branch oluşturun
 3. Değişikliklerinizi commit edin
 4. Branch'inizi push edin
-5. Pull request oluşturun 
+5. Pull request oluşturun
+
+## Kullanılan Kaynaklar
+
+### Veri Setleri
+- [Brain MRI Images for Brain Tumor Detection](https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection) - Kaggle
+- [Alzheimer's Dataset (4 class of Images)](https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images) - Kaggle
+
+### Modeller ve Algoritmalar
+- [ResNet50](https://arxiv.org/abs/1512.03385) - Deep Residual Learning for Image Recognition
+- [GradCAM](https://arxiv.org/abs/1610.02391) - Gradient-weighted Class Activation Mapping
+
+### Yazılım Kütüphaneleri
+- [PyTorch](https://pytorch.org/) - Derin öğrenme framework'ü
+- [FastAPI](https://fastapi.tiangolo.com/) - Modern web framework
+- [React](https://reactjs.org/) - Frontend kütüphanesi
+- [Material-UI](https://mui.com/) - UI bileşen kütüphanesi
+- [OpenCV](https://opencv.org/) - Görüntü işleme kütüphanesi
+
+### Makaleler ve Dökümanlar
+- [Brain Tumor Detection Using Convolutional Neural Networks](https://www.sciencedirect.com/science/article/pii/S1877050920307924)
+- [Deep Learning for Alzheimer's Disease Detection](https://www.frontiersin.org/articles/10.3389/fnagi.2020.00184/full)
+- [Medical Image Analysis using Deep Learning](https://www.nature.com/articles/s41598-019-42557-4) 
