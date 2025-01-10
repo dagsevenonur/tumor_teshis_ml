@@ -104,63 +104,57 @@ const TumorVisualization = ({ imageUrl, result }) => {
       });
     };
 
-    // Eğer üst üste bindirilmiş görüntü varsa, yükle
     if (result?.overlay) {
       overlayImage.src = `data:image/png;base64,${result.overlay}`;
     }
     
-    // Eğer bounding box görüntüsü varsa, yükle
     if (result?.bbox_image) {
       bboxImage.src = `data:image/png;base64,${result.bbox_image}`;
     }
   }, [imageUrl, result]);
 
   return (
-    <Box sx={{ mt: 3 }}>
-      <Paper elevation={3} sx={{ p: 2, bgcolor: 'background.paper' }}>
-        <Typography variant="h5" align="center" gutterBottom>
-          Tümör Görselleştirmesi
-        </Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center', width: '100%' }}>
-          <Box sx={{ width: '80%', maxWidth: '800px' }}>
-            <Typography variant="subtitle1" align="center" sx={{ mb: 1 }}>Isı Haritası</Typography>
-            <Box sx={{ 
-              width: '100%', 
-              display: 'flex', 
-              justifyContent: 'center',
-              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-              borderRadius: '8px',
-              overflow: 'hidden'
-            }}>
-              <img 
-                src={`data:image/png;base64,${result?.overlay ? result.overlay : imageUrl}`} 
-                alt="Tümör Isı Haritası" 
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </Box>
-            <Typography variant="caption" align="center" display="block" sx={{ mt: 1 }}>
-              Kırmızı alanlar tümör olasılığının yüksek olduğu bölgeleri gösterir
-            </Typography>
+    <Box>
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Typography variant="subtitle2" align="center" gutterBottom>
+            Isı Haritası
+          </Typography>
+          <Box sx={{ 
+            width: '100%', 
+            display: 'flex', 
+            justifyContent: 'center',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            borderRadius: '4px',
+            overflow: 'hidden'
+          }}>
+            <img 
+              src={`data:image/png;base64,${result?.overlay ? result.overlay : imageUrl}`} 
+              alt="Tümör Isı Haritası" 
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
           </Box>
-          <Box sx={{ width: '80%', maxWidth: '800px' }}>
-            <Typography variant="subtitle1" align="center" sx={{ mb: 1 }}>Tümör Tespiti</Typography>
-            <Box sx={{ 
-              width: '100%', 
-              display: 'flex', 
-              justifyContent: 'center',
-              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-              borderRadius: '8px',
-              overflow: 'hidden'
-            }}>
-              <img 
-                src={`data:image/png;base64,${result?.bbox_image ? result.bbox_image : imageUrl}`} 
-                alt="Tümör Tespiti" 
-                style={{ width: '100%', height: 'auto', display: 'block' }}
-              />
-            </Box>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Typography variant="subtitle2" align="center" gutterBottom>
+            Tümör Tespiti
+          </Typography>
+          <Box sx={{ 
+            width: '100%', 
+            display: 'flex', 
+            justifyContent: 'center',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            borderRadius: '4px',
+            overflow: 'hidden'
+          }}>
+            <img 
+              src={`data:image/png;base64,${result?.bbox_image ? result.bbox_image : imageUrl}`} 
+              alt="Tümör Tespiti" 
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
           </Box>
-        </Box>
-      </Paper>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
@@ -275,38 +269,168 @@ function App() {
   };
 
   const exportToPDF = async () => {
-    if (!resultsRef.current) return;
+    if (!resultsRef.current || !result) return;
 
     try {
-      const canvas = await html2canvas(resultsRef.current, {
-        scale: 2,
-        useCORS: true,
-        logging: false
-      });
-
-      const imgData = canvas.toDataURL('image/jpeg', 1.0);
       const pdf = new jsPDF('p', 'mm', 'a4');
+      
+      // Türkçe karakter desteği için özel font yükleme
+      pdf.addFont('https://raw.githubusercontent.com/googlefonts/noto-fonts/main/hinted/ttf/NotoSans/NotoSans-Regular.ttf', 'NotoSans', 'normal');
+      pdf.setFont('NotoSans');
+      
       const pdfWidth = pdf.internal.pageSize.getWidth();
       const pdfHeight = pdf.internal.pageSize.getHeight();
-      const imgWidth = canvas.width;
-      const imgHeight = canvas.height;
-      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-      const imgX = (pdfWidth - imgWidth * ratio) / 2;
-      const imgY = 30;
+      const margin = 20;
+      const contentWidth = pdfWidth - (2 * margin);
 
-      // Başlık ekle
-      pdf.setFontSize(16);
-      pdf.text('Tıbbi Görüntü Analizi Raporu', pdfWidth / 2, 20, { align: 'center' });
+      // Başlık Alanı
+      pdf.setFillColor(25, 118, 210);
+      pdf.rect(0, 0, pdfWidth, 50, 'F');
       
-      // Tarih ekle
-      pdf.setFontSize(10);
-      pdf.text(`Tarih: ${new Date().toLocaleDateString('tr-TR')}`, 20, 27);
+      // Başlık
+      pdf.setFontSize(24);
+      pdf.setTextColor(255, 255, 255);
+      pdf.text('Tibbi Görüntü Analizi Raporu', margin, 30);
 
-      // Görüntü ve sonuçları ekle
-      pdf.addImage(imgData, 'JPEG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+      // Hastane Bilgileri
+      pdf.setFontSize(10);
+      pdf.setTextColor(220, 220, 220);
+      pdf.text('Hüsniye Özdilek Mesleki ve Teknik Anadolu Lisesi', margin, 40);
+      pdf.text('Bilisim Teknolojileri Bölümü', margin, 45);
+
+      // Rapor Bilgileri
+      const reportId = Math.random().toString(36).substr(2, 9).toUpperCase();
+      const currentDate = new Date().toLocaleDateString('tr-TR');
+      
+      pdf.setFillColor(245, 247, 250);
+      pdf.rect(margin, 60, contentWidth, 30, 'F');
+      pdf.setTextColor(100, 100, 100);
+      pdf.setFontSize(10);
+      pdf.text('Rapor No:', margin + 5, 70);
+      pdf.text('Tarih:', margin + 5, 80);
+      
+      pdf.setTextColor(50, 50, 50);
+      pdf.setFontSize(11);
+      pdf.text(reportId, margin + 35, 70);
+      pdf.text(currentDate, margin + 35, 80);
+
+      // Hasta Bilgileri
+      pdf.setFillColor(25, 118, 210);
+      pdf.setTextColor(255, 255, 255);
+      pdf.rect(margin, 100, contentWidth, 10, 'F');
+      pdf.setFontSize(12);
+      pdf.text('ANALIZ SONUCLARI', margin + 5, 107);
+
+      // Analiz Detayları
+      pdf.setTextColor(50, 50, 50);
+      pdf.setFontSize(11);
+      let y = 120;
+      
+      // Analiz Tipi
+      pdf.setFillColor(245, 247, 250);
+      pdf.rect(margin, y, contentWidth, 10, 'F');
+      pdf.text('Analiz Tipi:', margin + 5, y + 7);
+      pdf.text(getTabInfo(selectedTab).title, margin + 50, y + 7);
+      
+      // Sonuç
+      y += 15;
+      pdf.setFillColor(245, 247, 250);
+      pdf.rect(margin, y, contentWidth, 10, 'F');
+      pdf.text('Sonuc:', margin + 5, y + 7);
+      const resultText = result.has_tumor ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi';
+      pdf.setTextColor(result.has_tumor ? '#d32f2f' : '#2e7d32');
+      pdf.text(resultText.replace('ü', 'u'), margin + 50, y + 7);
+      
+      // Güven Oranı
+      y += 15;
+      pdf.setTextColor(50, 50, 50);
+      pdf.setFillColor(245, 247, 250);
+      pdf.rect(margin, y, contentWidth, 10, 'F');
+      pdf.text('Güven Orani:', margin + 5, y + 7);
+      pdf.text(`${(result.confidence * 100).toFixed(2)}%`, margin + 50, y + 7);
+
+      // Olasılık Değerleri Başlığı
+      y += 25;
+      pdf.setFillColor(25, 118, 210);
+      pdf.setTextColor(255, 255, 255);
+      pdf.rect(margin, y, contentWidth, 10, 'F');
+      pdf.setFontSize(12);
+      pdf.text('OLASILIK DEGERLERI', margin + 5, y + 7);
+
+      // Olasılık Tablosu
+      y += 15;
+      const cellPadding = 5;
+      const colWidth = contentWidth / 2;
+      
+      // Tablo Başlığı
+      pdf.setFillColor(245, 247, 250);
+      pdf.rect(margin, y, contentWidth, 10, 'F');
+      pdf.setTextColor(50, 50, 50);
+      pdf.setFontSize(10);
+      pdf.text('Durum', margin + cellPadding, y + 7);
+      pdf.text('Oran', margin + colWidth + cellPadding, y + 7);
+      
+      // Tümör Değeri
+      y += 12;
+      pdf.text('Tümör', margin + cellPadding, y + 7);
+      pdf.text(`${(result.all_probabilities.tumor * 100).toFixed(2)}%`, margin + colWidth + cellPadding, y + 7);
+      
+      // Normal Değeri
+      y += 12;
+      pdf.text('Normal', margin + cellPadding, y + 7);
+      pdf.text(`${(result.all_probabilities.no_tumor * 100).toFixed(2)}%`, margin + colWidth + cellPadding, y + 7);
+
+      // Görsel Sonuçlar
+      if (result.overlay && result.bbox_image) {
+        // Yeni sayfa ekle
+        pdf.addPage();
+        
+        // Başlık
+        pdf.setFillColor(25, 118, 210);
+        pdf.rect(0, 0, pdfWidth, 50, 'F');
+        pdf.setFontSize(24);
+        pdf.setTextColor(255, 255, 255);
+        pdf.text('Görsel Analiz Sonuclari', margin, 30);
+
+        let y = 70;
+        try {
+          // Isı Haritası
+          pdf.setTextColor(50, 50, 50);
+          pdf.setFontSize(12);
+          pdf.text('Isi Haritasi', margin, y - 5);
+          const overlayImg = result.overlay;
+          pdf.addImage(overlayImg, 'PNG', margin, y, contentWidth / 2 - 5, contentWidth / 2 - 5);
+
+          // Tümör Tespiti
+          pdf.text('Tümör Tespiti', margin + contentWidth / 2 + 5, y - 5);
+          const bboxImg = result.bbox_image;
+          pdf.addImage(bboxImg, 'PNG', margin + contentWidth / 2 + 5, y, contentWidth / 2 - 5, contentWidth / 2 - 5);
+        } catch (imgError) {
+          console.error('Görsel ekleme hatası:', imgError);
+          pdf.setTextColor(255, 0, 0);
+          pdf.text('Görseller eklenirken bir hata olustu.', margin, y + 20);
+        }
+
+        // Alt Bilgi (2. sayfa için)
+        pdf.setFillColor(245, 247, 250);
+        pdf.rect(0, pdfHeight - 25, pdfWidth, 25, 'F');
+        pdf.setTextColor(100, 100, 100);
+        pdf.setFontSize(8);
+        pdf.text('Bu rapor yapay zeka destekli analiz sistemi tarafindan olusturulmustur.', margin, pdfHeight - 15);
+        pdf.text(`Olusturulma Tarihi: ${new Date().toLocaleString('tr-TR')}`, pdfWidth - margin - 80, pdfHeight - 8);
+
+        // Alt Bilgi (1. sayfa için)
+        pdf.setPage(1);
+        pdf.setFillColor(245, 247, 250);
+        pdf.rect(0, pdfHeight - 25, pdfWidth, 25, 'F');
+        pdf.setTextColor(100, 100, 100);
+        pdf.setFontSize(8);
+        pdf.text('Bu rapor yapay zeka destekli analiz sistemi tarafindan olusturulmustur.', margin, pdfHeight - 15);
+        pdf.text(`Olusturulma Tarihi: ${new Date().toLocaleString('tr-TR')}`, pdfWidth - margin - 80, pdfHeight - 8);
+      }
 
       // PDF'i kaydet
-      pdf.save('tibbi-goruntu-analizi-raporu.pdf');
+      pdf.save(`tibbi-goruntu-analizi-raporu-${reportId}.pdf`);
     } catch (error) {
       console.error('PDF oluşturma hatası:', error);
     }
@@ -315,22 +439,43 @@ function App() {
   const exportToCSV = () => {
     if (!result) return;
 
-    const csvData = [
-      ['Tıbbi Görüntü Analizi Sonuçları'],
-      ['Tarih', new Date().toLocaleDateString('tr-TR')],
-      [''],
-      ['Analiz Tipi', getTabInfo(selectedTab).title],
-      ['Sonuç', result.tumor_detected ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi'],
-      ['Güven Oranı', `${(result.confidence * 100).toFixed(2)}%`],
-      [''],
-      ['Olasılık Değerleri'],
-      ['Tümör', `${(result.all_probabilities.tumor * 100).toFixed(2)}%`],
-      ['Normal', `${(result.all_probabilities.no_tumor * 100).toFixed(2)}%`]
-    ];
+    try {
+      const currentDate = new Date().toLocaleDateString('tr-TR');
+      const reportId = Math.random().toString(36).substr(2, 9).toUpperCase();
 
-    const csvContent = csvData.map(row => row.join(',')).join('\\n');
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    saveAs(blob, 'tibbi-goruntu-analizi-sonuclari.csv');
+      const csvData = [
+        ['Tıbbi Görüntü Analizi Raporu'],
+        [''],
+        ['Rapor Bilgileri'],
+        ['Tarih', currentDate],
+        ['Rapor No', reportId],
+        [''],
+        ['Analiz Detayları'],
+        ['Analiz Tipi', getTabInfo(selectedTab).title],
+        ['Sonuç', result.has_tumor ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi'],
+        ['Güven Oranı', `${(result.confidence * 100).toFixed(2)}%`],
+        [''],
+        ['Olasılık Değerleri'],
+        ['Durum', 'Oran (%)'],
+        ['Tümör', (result.all_probabilities.tumor * 100).toFixed(2)],
+        ['Normal', (result.all_probabilities.no_tumor * 100).toFixed(2)],
+        [''],
+        ['Notlar'],
+        [result.has_tumor 
+          ? 'Görüntüde tümör belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun.'
+          : 'Görüntüde tümör belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin.'
+        ],
+        [''],
+        ['Bu rapor otomatik olarak oluşturulmuştur.'],
+        [`Oluşturulma Tarihi: ${new Date().toLocaleString('tr-TR')}`]
+      ];
+
+      const csvContent = csvData.map(row => row.join(',')).join('\\n');
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      saveAs(blob, `tibbi-goruntu-analizi-raporu-${reportId}.csv`);
+    } catch (error) {
+      console.error('CSV oluşturma hatası:', error);
+    }
   };
 
   const renderAnalysisResults = (result) => {
@@ -358,68 +503,68 @@ function App() {
 
       return (
         <Box ref={resultsRef}>
-          <TumorVisualization 
-            imageUrl={previewUrl} 
-            result={result}
-          />
-          
           <Grid container spacing={3} sx={{ mt: 2 }}>
             <Grid item xs={12}>
               <Typography variant="h6" gutterBottom color={result.has_tumor ? 'error' : 'success'} align="center">
                 {result.has_tumor ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi'}
-              </Typography>
-              <Typography variant="body1" align="center" sx={{ mb: 3 }}>
-                Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
+                <Typography variant="body2" component="span" sx={{ ml: 1 }}>
+                  (Güven: {(result.confidence * 100).toFixed(2)}%)
+                </Typography>
               </Typography>
             </Grid>
 
+            <Grid item xs={12}>
+              <TumorVisualization 
+                imageUrl={previewUrl} 
+                result={result}
+              />
+            </Grid>
+
             <Grid item xs={12} md={6}>
-              <Typography variant="h6" gutterBottom align="center" color="primary">
+              <Typography variant="subtitle2" gutterBottom align="center">
                 Olasılık Dağılımı
               </Typography>
-              <ResponsiveContainer width="100%" height={300}>
+              <ResponsiveContainer width="100%" height={200}>
                 <PieChart>
                   <Pie
                     data={pieData}
                     cx="50%"
                     cy="50%"
-                    innerRadius={60}
-                    outerRadius={80}
+                    innerRadius={40}
+                    outerRadius={60}
                     fill="#8884d8"
                     paddingAngle={5}
                     dataKey="value"
-                    label={({ name, value }) => `${name}: ${(value * 100).toFixed(2)}%`}
+                    label={({ name, value }) => `${name}: ${(value * 100).toFixed(1)}%`}
                   >
                     {pieData.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
                   <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
-                  <Legend />
                 </PieChart>
               </ResponsiveContainer>
             </Grid>
 
             <Grid item xs={12} md={6}>
-              <Typography variant="h6" gutterBottom align="center" color="primary">
+              <Typography variant="subtitle2" gutterBottom align="center">
                 Karşılaştırmalı Analiz
               </Typography>
-              <ResponsiveContainer width="100%" height={300}>
+              <ResponsiveContainer width="100%" height={200}>
                 <BarChart
                   data={barData}
-                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+                  margin={{ top: 10, right: 10, left: 10, bottom: 5 }}
                 >
                   <Bar dataKey="Tumor" fill="#ff4444" name="Tümör" />
                   <Bar dataKey="Normal" fill="#4caf50" />
                   <Tooltip formatter={(value) => `${value.toFixed(2)}%`} />
-                  <Legend />
                 </BarChart>
               </ResponsiveContainer>
             </Grid>
 
             <Grid item xs={12}>
-              <Alert severity={result.has_tumor ? "warning" : "success"} sx={{ mt: 2 }}>
-                <Typography variant="body1">
+              <Alert severity={result.has_tumor ? "warning" : "success"} sx={{ mt: 1 }}>
+                <Typography variant="body2">
                   {result.has_tumor 
                     ? "Görüntüde tümör belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun."
                     : "Görüntüde tümör belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
@@ -555,343 +700,193 @@ function App() {
 
   return (
     <>
-      <Typography variant="h4" component="h1" gutterBottom align="center" bgcolor="primary.main" paddingY={3} fontWeight="bold" color="white" sx={{ boxShadow: 2 }}>
+      <Typography variant="h4" component="h1" gutterBottom align="center" bgcolor="primary.main" paddingY={2} fontWeight="bold" color="white" sx={{ boxShadow: 2 }}>
         Tıbbi Görüntü Analizi
       </Typography>
       
-      <Container maxWidth="lg">
-        <Box sx={{ my: 4 }}>
-          <Paper elevation={3} sx={{ p: 3 }}>
-            <Tabs
-              value={selectedTab}
-              onChange={handleTabChange}
-              variant="fullWidth"
-              textColor="primary"
-              indicatorColor="primary"
-              aria-label="teşhis seçenekleri"
-              sx={{ borderBottom: 1, borderColor: 'divider', mb: 2 }}
-            >
-              <Tab icon={<BiotechIcon />} label="Beyin Tümörü" />
-              <Tab icon={<PsychologyIcon />} label="Alzheimer" />
-            </Tabs>
+      <Box sx={{ p: 2 }}>
+        <Paper elevation={3} sx={{ p: 2 }}>
+          <Tabs
+            value={selectedTab}
+            onChange={handleTabChange}
+            variant="fullWidth"
+            textColor="primary"
+            indicatorColor="primary"
+            aria-label="teşhis seçenekleri"
+            sx={{ borderBottom: 1, borderColor: 'divider', mb: 2 }}
+          >
+            <Tab icon={<BiotechIcon />} label="Beyin Tümörü" />
+            <Tab icon={<PsychologyIcon />} label="Alzheimer" />
+          </Tabs>
 
-            {[0, 1].map((index) => (
-              <TabPanel key={index} value={selectedTab} index={index}>
-                <Alert severity="info" sx={{ mb: 3 }}>
-                  <Typography variant="subtitle1" gutterBottom>
-                    {getTabInfo(index).title}
-                  </Typography>
-                  <Typography variant="body2">
-                    {getTabInfo(index).description}
-                    <br />
-                    Desteklenen formatlar: {getTabInfo(index).formats}
-                  </Typography>
-                </Alert>
+          {[0, 1].map((index) => (
+            <TabPanel key={index} value={selectedTab} index={index}>
+              <Alert severity="info" sx={{ mb: 2 }}>
+                <Typography variant="subtitle1" gutterBottom>
+                  {getTabInfo(index).title}
+                </Typography>
+                <Typography variant="body2">
+                  {getTabInfo(index).description}
+                  <br />
+                  Desteklenen formatlar: {getTabInfo(index).formats}
+                </Typography>
+              </Alert>
 
-                <StyledDropzoneArea
-                  {...getRootProps()}
-                  isDragActive={isDragActive}
-                  hasFile={!!selectedFile}
-                >
-                  <input {...getInputProps()} />
-                  <CloudUploadIcon sx={{ fontSize: 48, color: isDragActive ? 'primary.main' : 'text.secondary', mb: 2 }} />
-                  {!selectedFile ? (
-                    <>
-                      <Typography variant="h6" gutterBottom color="text.secondary">
-                        {isDragActive ? 'Görüntüyü buraya bırakın' : 'Görüntü yüklemek için tıklayın veya sürükleyin'}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        Desteklenen formatlar: {getTabInfo(index).formats}
-                      </Typography>
-                    </>
-                  ) : (
-                    <Box sx={{ 
-                      position: 'relative',
-                      maxHeight: '600px',
-                      overflow: 'auto',
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center'
-                    }}>
-                      <ImagePreview 
-                        src={previewUrl} 
-                        alt="Seçilen görüntü" 
-                        style={getImageStyle()}
-                      />
-                      <IconButton
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleDelete();
-                        }}
-                        sx={{
-                          position: 'absolute',
-                          top: 10,
-                          right: 10,
-                          bgcolor: 'background.paper',
-                          boxShadow: 1,
-                          '&:hover': { bgcolor: 'error.light', color: 'white' }
-                        }}
+              <Box>
+                <Grid container spacing={2}>
+                  {/* Sol Panel - Görüntü Yükleme ve İşleme */}
+                  <Grid item xs={12} md={6}>
+                    <Paper elevation={3} sx={{ p: 2, height: '100%' }}>
+                      <StyledDropzoneArea
+                        {...getRootProps()}
+                        isDragActive={isDragActive}
+                        hasFile={!!selectedFile}
+                        sx={{ minHeight: '300px', maxHeight: '400px' }}
                       >
-                        <DeleteIcon />
-                      </IconButton>
-                    </Box>
-                  )}
-                </StyledDropzoneArea>
+                        <input {...getInputProps()} />
+                        <CloudUploadIcon sx={{ fontSize: 48, color: isDragActive ? 'primary.main' : 'text.secondary', mb: 2 }} />
+                        {!selectedFile ? (
+                          <>
+                            <Typography variant="h6" gutterBottom color="text.secondary">
+                              {isDragActive ? 'Görüntüyü buraya bırakın' : 'Görüntü yüklemek için tıklayın veya sürükleyin'}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                              Desteklenen formatlar: {getTabInfo(selectedTab).formats}
+                            </Typography>
+                          </>
+                        ) : (
+                          <Box sx={{ position: 'relative' }}>
+                            <ImagePreview 
+                              src={previewUrl} 
+                              alt="Seçilen görüntü" 
+                              style={getImageStyle()}
+                            />
+                          </Box>
+                        )}
+                      </StyledDropzoneArea>
 
-                {selectedFile && (
-                  <Box sx={{ mt: 3, textAlign: 'center' }}>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      size="large"
-                      onClick={analyzeImage}
-                      disabled={analyzing}
-                      sx={{
-                        minWidth: 200,
-                        boxShadow: 2,
-                        '&:hover': { transform: 'translateY(-2px)' },
-                        transition: 'transform 0.2s'
-                      }}
-                    >
-                      {analyzing ? <CircularProgress size={24} /> : 'Analiz Et'}
-                    </Button>
-                  </Box>
-                )}
+                      {/* Görüntü İşleme Kontrolleri */}
+                      {selectedFile && (
+                        <Box sx={{ mt: 2 }}>
+                          <Typography variant="subtitle1" gutterBottom>
+                            Görüntü İşleme
+                          </Typography>
+                          <Grid container spacing={2}>
+                            <Grid item xs={6}>
+                              <Typography variant="caption">Parlaklık</Typography>
+                              <Slider
+                                size="small"
+                                value={imageSettings.brightness}
+                                onChange={handleSettingChange('brightness')}
+                                min={0}
+                                max={200}
+                              />
+                            </Grid>
+                            <Grid item xs={6}>
+                              <Typography variant="caption">Kontrast</Typography>
+                              <Slider
+                                size="small"
+                                value={imageSettings.contrast}
+                                onChange={handleSettingChange('contrast')}
+                                min={0}
+                                max={200}
+                              />
+                            </Grid>
+                          </Grid>
+                          <Stack 
+                            direction="row" 
+                            spacing={1} 
+                            justifyContent="center"
+                            sx={{ mt: 1 }}
+                          >
+                            <IconButton size="small" onClick={() => handleSettingChange('rotation')(null, (imageSettings.rotation - 90) % 360)}>
+                              <RotateLeftIcon />
+                            </IconButton>
+                            <IconButton size="small" onClick={() => handleSettingChange('rotation')(null, (imageSettings.rotation + 90) % 360)}>
+                              <RotateRightIcon />
+                            </IconButton>
+                            <IconButton size="small" onClick={() => handleSettingChange('isFlippedX')(null, !imageSettings.isFlippedX)}>
+                              <FlipIcon sx={{ transform: 'rotate(90deg)' }} />
+                            </IconButton>
+                            <IconButton size="small" onClick={() => handleSettingChange('isFlippedY')(null, !imageSettings.isFlippedY)}>
+                              <FlipIcon />
+                            </IconButton>
+                            <IconButton size="small" onClick={resetSettings}>
+                              <RestoreIcon />
+                            </IconButton>
+                          </Stack>
+                        </Box>
+                      )}
 
-                {error && (
-                  <Alert severity="error" sx={{ mt: 2 }}>
-                    {error}
-                  </Alert>
-                )}
+                      {selectedFile && (
+                        <Box sx={{ mt: 2, textAlign: 'center', display: 'flex', justifyContent: 'center', gap: 2 }}>
+                          <Button
+                            variant="contained"
+                            onClick={analyzeImage}
+                            disabled={analyzing}
+                            sx={{ minWidth: 150 }}
+                          >
+                            {analyzing ? <CircularProgress size={24} /> : 'Analiz Et'}
+                          </Button>
+                          <Button
+                            variant="outlined"
+                            color="error"
+                            onClick={handleDelete}
+                            startIcon={<DeleteIcon />}
+                            sx={{ minWidth: 150 }}
+                          >
+                            Resmi Sil
+                          </Button>
+                        </Box>
+                      )}
+                    </Paper>
+                  </Grid>
 
-                {result && renderAnalysisResults(result)}
-              </TabPanel>
-            ))}
-          </Paper>
-        </Box>
-      </Container>
+                  {/* Sağ Panel - Analiz Sonuçları */}
+                  <Grid item xs={12} md={6}>
+                    <Paper elevation={3} sx={{ p: 2, height: '100%', minHeight: '600px' }}>
+                      {error ? (
+                        <Alert severity="error" sx={{ mb: 2 }}>
+                          {error}
+                        </Alert>
+                      ) : !result ? (
+                        <Box sx={{ 
+                          height: '100%', 
+                          display: 'flex', 
+                          alignItems: 'center', 
+                          justifyContent: 'center',
+                          flexDirection: 'column',
+                          gap: 2
+                        }}>
+                          <Typography variant="h6" color="text.secondary">
+                            {getTabInfo(selectedTab).title}
+                          </Typography>
+                          <Typography variant="body2" color="text.secondary" align="center">
+                            {getTabInfo(selectedTab).description}
+                          </Typography>
+                        </Box>
+                      ) : (
+                        <Box sx={{ height: '100%', overflow: 'auto' }}>
+                          {renderAnalysisResults(result)}
+                        </Box>
+                      )}
+                    </Paper>
+                  </Grid>
+                </Grid>
+              </Box>
+            </TabPanel>
+          ))}
+        </Paper>
+      </Box>
 
       {selectedFile && (
-        <Container maxWidth="lg">
-          <Box sx={{ mt: 3 }}>
-            <Paper 
-              elevation={3} 
-              sx={{ 
-                p: 3,
-                background: 'linear-gradient(to right bottom, #ffffff, #f8f9fa)',
-                borderRadius: 2
-              }}
-            >
-              <Typography 
-                variant="h6" 
-                gutterBottom 
-                color="primary"
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 1,
-                  mb: 3,
-                  borderBottom: '2px solid',
-                  borderColor: 'primary.main',
-                  pb: 1
-                }}
-              >
-                <BiotechIcon />
-                Görüntü İşleme Kontrolleri
-              </Typography>
-              
-              <Grid container spacing={3}>
-                <Grid item xs={12} md={6}>
-                  <Paper 
-                    elevation={1} 
-                    sx={{ 
-                      p: 2, 
-                      background: 'rgba(255,255,255,0.8)',
-                      borderRadius: 2
-                    }}
-                  >
-                    <Typography 
-                      gutterBottom 
-                      variant="subtitle1" 
-                      color="primary.dark"
-                      sx={{ 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        gap: 1 
-                      }}
-                    >
-                      🌟 Parlaklık
-                    </Typography>
-                    <Stack direction="row" spacing={2} alignItems="center">
-                      <Typography variant="body2" color="text.secondary">
-                        0%
-                      </Typography>
-                      <Slider
-                        value={imageSettings.brightness}
-                        onChange={handleSettingChange('brightness')}
-                        min={0}
-                        max={200}
-                        valueLabelDisplay="auto"
-                        sx={{
-                          '& .MuiSlider-thumb': {
-                            boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                          }
-                        }}
-                      />
-                      <Typography variant="body2" color="text.secondary">
-                        200%
-                      </Typography>
-                    </Stack>
-                  </Paper>
-                </Grid>
-                
-                <Grid item xs={12} md={6}>
-                  <Paper 
-                    elevation={1} 
-                    sx={{ 
-                      p: 2, 
-                      background: 'rgba(255,255,255,0.8)',
-                      borderRadius: 2
-                    }}
-                  >
-                    <Typography 
-                      gutterBottom 
-                      variant="subtitle1" 
-                      color="primary.dark"
-                      sx={{ 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        gap: 1 
-                      }}
-                    >
-                      🎨 Kontrast
-                    </Typography>
-                    <Stack direction="row" spacing={2} alignItems="center">
-                      <Typography variant="body2" color="text.secondary">
-                        0%
-                      </Typography>
-                      <Slider
-                        value={imageSettings.contrast}
-                        onChange={handleSettingChange('contrast')}
-                        min={0}
-                        max={200}
-                        valueLabelDisplay="auto"
-                        sx={{
-                          '& .MuiSlider-thumb': {
-                            boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                          }
-                        }}
-                      />
-                      <Typography variant="body2" color="text.secondary">
-                        200%
-                      </Typography>
-                    </Stack>
-                  </Paper>
-                </Grid>
-
-                <Grid item xs={12}>
-                  <Paper 
-                    elevation={1} 
-                    sx={{ 
-                      p: 2, 
-                      background: 'rgba(255,255,255,0.8)',
-                      borderRadius: 2
-                    }}
-                  >
-                    <Typography 
-                      gutterBottom 
-                      variant="subtitle1" 
-                      color="primary.dark"
-                      sx={{ mb: 2 }}
-                    >
-                      🔄 Dönüştürme Kontrolleri
-                    </Typography>
-                    <Stack 
-                      direction="row" 
-                      spacing={2} 
-                      justifyContent="center"
-                      sx={{
-                        '& .MuiIconButton-root': {
-                          bgcolor: 'background.paper',
-                          boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                          '&:hover': {
-                            bgcolor: 'primary.light',
-                            color: 'white',
-                            transform: 'translateY(-2px)',
-                            boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
-                          },
-                          transition: 'all 0.2s'
-                        }
-                      }}
-                    >
-                      <IconButton 
-                        onClick={() => handleSettingChange('rotation')(null, (imageSettings.rotation - 90) % 360)}
-                        title="Sola Döndür"
-                      >
-                        <RotateLeftIcon />
-                      </IconButton>
-                      <IconButton 
-                        onClick={() => handleSettingChange('rotation')(null, (imageSettings.rotation + 90) % 360)}
-                        title="Sağa Döndür"
-                      >
-                        <RotateRightIcon />
-                      </IconButton>
-                      <IconButton 
-                        onClick={() => handleSettingChange('isFlippedX')(null, !imageSettings.isFlippedX)}
-                        title="Yatay Çevir"
-                      >
-                        <FlipIcon sx={{ transform: 'rotate(90deg)' }} />
-                      </IconButton>
-                      <IconButton 
-                        onClick={() => handleSettingChange('isFlippedY')(null, !imageSettings.isFlippedY)}
-                        title="Dikey Çevir"
-                      >
-                        <FlipIcon />
-                      </IconButton>
-                      <IconButton 
-                        onClick={() => handleSettingChange('scale')(null, Math.min(imageSettings.scale * 1.2, 2))}
-                        title="Yakınlaştır"
-                        disabled={imageSettings.scale >= 2}
-                      >
-                        <ZoomInIcon />
-                      </IconButton>
-                      <IconButton 
-                        onClick={() => handleSettingChange('scale')(null, Math.max(imageSettings.scale / 1.2, 0.5))}
-                        title="Uzaklaştır"
-                        disabled={imageSettings.scale <= 0.5}
-                      >
-                        <ZoomOutIcon />
-                      </IconButton>
-                      <IconButton 
-                        onClick={resetSettings} 
-                        color="primary"
-                        title="Ayarları Sıfırla"
-                        sx={{
-                          ml: 2,
-                          border: '2px solid',
-                          borderColor: 'primary.main'
-                        }}
-                      >
-                        <RestoreIcon />
-                      </IconButton>
-                    </Stack>
-                  </Paper>
-                </Grid>
-              </Grid>
-            </Paper>
-          </Box>
-        </Container>
-      )}
-
-      {result && (
-        <Container maxWidth="lg" sx={{ mb: 8, pb: 8 }}>
+        <Box sx={{ p: 2 }}>
           <Paper 
             elevation={3} 
             sx={{ 
-              p: 3,
+              p: 2,
               background: 'linear-gradient(45deg, #1976d2 30%, #2196f3 90%)',
-              borderRadius: 2,
-              mt: 4
+              borderRadius: 2
             }}
           >
             <Typography 
@@ -956,7 +951,7 @@ function App() {
               </Button>
             </Stack>
           </Paper>
-        </Container>
+        </Box>
       )}
     </>
   );
