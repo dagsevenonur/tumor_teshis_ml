@@ -36,6 +36,10 @@ import { saveAs } from 'file-saver';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import TableViewIcon from '@mui/icons-material/TableView';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import TextFieldsIcon from '@mui/icons-material/TextFields';
+import StraightenIcon from '@mui/icons-material/Straighten';
+import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
 
 const StyledDropzoneArea = styled('div')(({ theme, isDragActive, hasFile }) => ({
   border: '2px dashed',
