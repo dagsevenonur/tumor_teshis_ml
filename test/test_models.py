@@ -31,8 +31,8 @@ class TestDataset(Dataset):
 
 def test_tumor_model():
     print("\nBeyin Tümörü Modeli Test Ediliyor...")
-    yes_path = Path("test/tumor/yes")
-    no_path = Path("test/tumor/no")
+    yes_path = Path("tumor/yes")
+    no_path = Path("tumor/no")
     
     total_images = 0
     correct_predictions = 0
@@ -43,49 +43,55 @@ def test_tumor_model():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"Kullanılan cihaz: {device}")
     
+    # Tümörlü görüntüleri say
+    yes_images = list(yes_path.glob("*.jpg"))
+    no_images = list(no_path.glob("*.jpg"))
+    print(f"Tümörlü görüntü sayısı: {len(yes_images)}")
+    print(f"Normal görüntü sayısı: {len(no_images)}")
+    
     # Tümörlü görüntüleri test et
-    for img_path in tqdm(list(yes_path.glob("*")), desc="Tümörlü görüntüler test ediliyor"):
-        if img_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-            total_images += 1
-            with open(img_path, 'rb') as img:
-                files = {'file': (img_path.name, img, 'image/jpeg')}
-                try:
-                    response = requests.post('http://localhost:8000/analyze/tumor', files=files)
-                    if response.status_code == 200:
-                        result = response.json()
-                        if result.get('has_tumor', False):
-                            correct_predictions += 1
-                            prediction_status = "Doğru"
-                        else:
-                            prediction_status = "Yanlış"
-                        
-                        results.append(f"Dosya: {img_path.name}, Gerçek: Tümörlü, Tahmin: {'Tümörlü' if result.get('has_tumor', False) else 'Normal'}, Durum: {prediction_status}")
+    print("\nTümörlü görüntüler test ediliyor...")
+    for img_path in tqdm(yes_images, desc="Tümörlü görüntüler"):
+        total_images += 1
+        with open(img_path, 'rb') as img:
+            files = {'file': (img_path.name, img, 'image/jpeg')}
+            try:
+                response = requests.post('http://localhost:8000/analyze/tumor', files=files)
+                if response.status_code == 200:
+                    result = response.json()
+                    if result.get('has_tumor', False):
+                        correct_predictions += 1
+                        prediction_status = "Doğru"
                     else:
-                        results.append(f"Hata: {img_path.name} analiz edilemedi. Status: {response.status_code}")
-                except Exception as e:
-                    results.append(f"Hata: {img_path.name} analiz edilemedi. Hata: {str(e)}")
+                        prediction_status = "Yanlış"
+                    
+                    results.append(f"Dosya: {img_path.name}, Gerçek: Tümörlü, Tahmin: {'Tümörlü' if result.get('has_tumor', False) else 'Normal'}, Durum: {prediction_status}, Güven: {result.get('confidence', 0):.2%}")
+                else:
+                    results.append(f"Hata: {img_path.name} analiz edilemedi. Status: {response.status_code}")
+            except Exception as e:
+                results.append(f"Hata: {img_path.name} analiz edilemedi. Hata: {str(e)}")
     
     # Tümörsüz görüntüleri test et
-    for img_path in tqdm(list(no_path.glob("*")), desc="Normal görüntüler test ediliyor"):
-        if img_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-            total_images += 1
-            with open(img_path, 'rb') as img:
-                files = {'file': (img_path.name, img, 'image/jpeg')}
-                try:
-                    response = requests.post('http://localhost:8000/analyze/tumor', files=files)
-                    if response.status_code == 200:
-                        result = response.json()
-                        if not result.get('has_tumor', True):
-                            correct_predictions += 1
-                            prediction_status = "Doğru"
-                        else:
-                            prediction_status = "Yanlış"
-                        
-                        results.append(f"Dosya: {img_path.name}, Gerçek: Normal, Tahmin: {'Tümörlü' if result.get('has_tumor', False) else 'Normal'}, Durum: {prediction_status}")
+    print("\nNormal görüntüler test ediliyor...")
+    for img_path in tqdm(no_images, desc="Normal görüntüler"):
+        total_images += 1
+        with open(img_path, 'rb') as img:
+            files = {'file': (img_path.name, img, 'image/jpeg')}
+            try:
+                response = requests.post('http://localhost:8000/analyze/tumor', files=files)
+                if response.status_code == 200:
+                    result = response.json()
+                    if not result.get('has_tumor', True):
+                        correct_predictions += 1
+                        prediction_status = "Doğru"
                     else:
-                        results.append(f"Hata: {img_path.name} analiz edilemedi. Status: {response.status_code}")
-                except Exception as e:
-                    results.append(f"Hata: {img_path.name} analiz edilemedi. Hata: {str(e)}")
+                        prediction_status = "Yanlış"
+                    
+                    results.append(f"Dosya: {img_path.name}, Gerçek: Normal, Tahmin: {'Tümörlü' if result.get('has_tumor', False) else 'Normal'}, Durum: {prediction_status}, Güven: {result.get('confidence', 0):.2%}")
+                else:
+                    results.append(f"Hata: {img_path.name} analiz edilemedi. Status: {response.status_code}")
+            except Exception as e:
+                results.append(f"Hata: {img_path.name} analiz edilemedi. Hata: {str(e)}")
     
     accuracy = (correct_predictions / total_images * 100) if total_images > 0 else 0
     
@@ -100,12 +106,12 @@ def test_tumor_model():
 def test_alzheimer_model():
     print("\nAlzheimer Modeli Test Ediliyor...")
     # Test klasöründeki sınıf isimleri
-    classes = ['non_demented', 'very_mild_demented', 'mild_demented', 'moderate_demented']
+    classes = ['NonDemented', 'VeryMildDemented', 'MildDemented', 'ModerateDemented']
     class_mapping = {
-        'non_demented': 'Normal',
-        'very_mild_demented': 'Çok Hafif',
-        'mild_demented': 'Hafif',
-        'moderate_demented': 'Orta'
+        'NonDemented': 'Normal',
+        'VeryMildDemented': 'Çok Hafif',
+        'MildDemented': 'Hafif',
+        'ModerateDemented': 'Orta'
     }
     
     # CUDA kullanılabilirliğini kontrol et
@@ -115,50 +121,60 @@ def test_alzheimer_model():
     # Toplam görüntü sayısını hesapla
     total_images = 0
     all_images = []
+    
+    # Her sınıf için görüntüleri topla
     for class_name in classes:
-        class_path = Path(f"test/alzheimer/{class_name}")
+        class_path = Path("alzheimer") / class_name
+        print(f"Kontrol edilen yol: {class_path}")
         if class_path.exists():
-            images = list(class_path.glob("*"))
+            images = list(class_path.glob("*.jpg"))
             total_images += len(images)
             all_images.extend([(img, class_name) for img in images])
+            print(f"{class_name}: {len(images)} görüntü")
+        else:
+            print(f"UYARI: {class_path} dizini bulunamadı!")
     
-    print(f"Toplam {total_images} görüntü test edilecek...")
+    if total_images == 0:
+        print("\nHATA: Test için hiç görüntü bulunamadı!")
+        return {
+            'model_name': 'Alzheimer Modeli',
+            'total_images': 0,
+            'correct_predictions': 0,
+            'accuracy': 0,
+            'results': ['Test görüntüleri bulunamadı']
+        }
+    
+    print(f"\nToplam {total_images} görüntü test edilecek...")
     correct_predictions = 0
     results = []
-    
-    # Batch processing için veri yükleyici oluştur
-    batch_size = 32  # GPU belleğine göre ayarlayın
     
     # Progress bar oluştur
     progress_bar = tqdm(total=total_images, desc="Alzheimer Testi")
     
-    # Görüntüleri batch'ler halinde işle
-    for i in range(0, len(all_images), batch_size):
-        batch = all_images[i:i + batch_size]
-        
-        for img_path, class_name in batch:
-            if img_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-                with open(img_path, 'rb') as img:
-                    files = {'file': (img_path.name, img, 'image/jpeg')}
-                    try:
-                        response = requests.post('http://localhost:8000/analyze/alzheimer', files=files, timeout=30)
-                        if response.status_code == 200:
-                            result = response.json()
-                            predicted_class = result.get('prediction', '')
-                            expected_class = class_mapping.get(class_name)
-                            
-                            if expected_class == predicted_class:
-                                correct_predictions += 1
-                                prediction_status = "Doğru"
-                            else:
-                                prediction_status = "Yanlış"
-                            
-                            results.append(f"Dosya: {img_path.name}, Gerçek: {expected_class}, Tahmin: {predicted_class}, Durum: {prediction_status}, Güven: {result.get('confidence', 0):.2%}")
+    # Her görüntüyü test et
+    for img_path, class_name in all_images:
+        if img_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
+            with open(img_path, 'rb') as img:
+                files = {'file': (img_path.name, img, 'image/jpeg')}
+                try:
+                    response = requests.post('http://localhost:8000/analyze/alzheimer', files=files, timeout=30)
+                    if response.status_code == 200:
+                        result = response.json()
+                        predicted_class = result.get('prediction', '')
+                        expected_class = class_mapping.get(class_name)
+                        
+                        if expected_class == predicted_class:
+                            correct_predictions += 1
+                            prediction_status = "Doğru"
                         else:
-                            results.append(f"Hata: {img_path.name} analiz edilemedi. Status: {response.status_code}")
-                    except Exception as e:
-                        results.append(f"Hata: {img_path.name} analiz edilemedi. Hata: {str(e)}")
-                progress_bar.update(1)
+                            prediction_status = "Yanlış"
+                        
+                        results.append(f"Dosya: {img_path.name}, Gerçek: {expected_class}, Tahmin: {predicted_class}, Durum: {prediction_status}, Güven: {result.get('confidence', 0):.2%}")
+                    else:
+                        results.append(f"Hata: {img_path.name} analiz edilemedi. Status: {response.status_code}")
+                except Exception as e:
+                    results.append(f"Hata: {img_path.name} analiz edilemedi. Hata: {str(e)}")
+            progress_bar.update(1)
     
     progress_bar.close()
     accuracy = (correct_predictions / total_images * 100) if total_images > 0 else 0
@@ -173,7 +189,7 @@ def test_alzheimer_model():
 
 def save_results(tumor_results, alzheimer_results):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"test/test_results_{timestamp}.txt"
+    filename = f"test_results_{timestamp}.txt"
     
     with open(filename, 'w', encoding='utf-8') as f:
         f.write("=== MODEL TEST SONUÇLARI ===\n")
