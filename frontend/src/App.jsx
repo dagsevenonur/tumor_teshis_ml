@@ -40,6 +40,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
 import StraightenIcon from '@mui/icons-material/Straighten';
 import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
+import TimelineIcon from '@mui/icons-material/Timeline';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import GroupIcon from '@mui/icons-material/Group';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import AnalysisResults from './components/AnalysisResults';
 
 const StyledDropzoneArea = styled('div')(({ theme, isDragActive, hasFile }) => ({
   border: '2px dashed',
@@ -491,186 +499,7 @@ function App() {
       );
     }
 
-    if (selectedTab === 0) {  // Beyin Tümörü sonuçları
-      const pieData = [
-        { name: 'Tümör', value: result.all_probabilities?.tumor || 0 },
-        { name: 'Normal', value: result.all_probabilities?.no_tumor || 0 }
-      ];
-
-      const barData = [{
-        name: 'Sonuç',
-        Tumor: (result.all_probabilities?.tumor || 0) * 100,
-        Normal: (result.all_probabilities?.no_tumor || 0) * 100
-      }];
-
-      const COLORS = ['#ff4444', '#4caf50'];
-
-      return (
-        <Box ref={resultsRef}>
-          <Grid container spacing={3} sx={{ mt: 2 }}>
-            <Grid item xs={12}>
-              <Typography variant="h6" gutterBottom color={result.has_tumor ? 'error' : 'success'} align="center">
-                {result.has_tumor ? 'Tümör Tespit Edildi' : 'Tümör Tespit Edilmedi'}
-                <Typography variant="body2" component="span" sx={{ ml: 1 }}>
-                  (Güven: {(result.confidence * 100).toFixed(2)}%)
-                </Typography>
-              </Typography>
-            </Grid>
-
-            <Grid item xs={12}>
-              <TumorVisualization 
-                imageUrl={previewUrl} 
-                result={result}
-              />
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Typography variant="subtitle2" gutterBottom align="center">
-                Olasılık Dağılımı
-              </Typography>
-              <ResponsiveContainer width="100%" height={200}>
-                <PieChart>
-                  <Pie
-                    data={pieData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={40}
-                    outerRadius={60}
-                    fill="#8884d8"
-                    paddingAngle={5}
-                    dataKey="value"
-                    label={({ name, value }) => `${name}: ${(value * 100).toFixed(1)}%`}
-                  >
-                    {pieData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
-                </PieChart>
-              </ResponsiveContainer>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Typography variant="subtitle2" gutterBottom align="center">
-                Karşılaştırmalı Analiz
-              </Typography>
-              <ResponsiveContainer width="100%" height={200}>
-                <BarChart
-                  data={barData}
-                  margin={{ top: 10, right: 10, left: 10, bottom: 5 }}
-                >
-                  <Bar dataKey="Tumor" fill="#ff4444" name="Tümör" />
-                  <Bar dataKey="Normal" fill="#4caf50" />
-                  <Tooltip formatter={(value) => `${value.toFixed(2)}%`} />
-                </BarChart>
-              </ResponsiveContainer>
-            </Grid>
-
-            <Grid item xs={12}>
-              <Alert severity={result.has_tumor ? "warning" : "success"} sx={{ mt: 1 }}>
-                <Typography variant="body2">
-                  {result.has_tumor 
-                    ? "Görüntüde tümör belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun."
-                    : "Görüntüde tümör belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
-                  }
-                </Typography>
-              </Alert>
-            </Grid>
-          </Grid>
-        </Box>
-      );
-    } else if (selectedTab === 1) {  // Alzheimer sonuçları
-      if (!result.all_probabilities) {
-        return (
-          <Alert severity="error" sx={{ mt: 2 }}>
-            Alzheimer analiz sonuçları alınamadı.
-          </Alert>
-        );
-      }
-
-      const pieData = Object.entries(result.all_probabilities).map(([name, value]) => ({
-        name: name,
-        value: value
-      }));
-
-      const barData = [{
-        name: 'Sonuç',
-        ...result.all_probabilities
-      }];
-
-      const COLORS = ['#4caf50', '#ff9800', '#f44336', '#9c27b0'];
-
-      return (
-        <Box ref={resultsRef}>
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
-              <Typography variant="h6" gutterBottom color="primary" align="center">
-                Alzheimer Risk Analizi Sonucu: <strong>{result.prediction}</strong>
-              </Typography>
-              <Typography variant="body1" align="center" sx={{ mb: 3 }}>
-                Güven Oranı: <strong>{(result.confidence * 100).toFixed(2)}%</strong>
-              </Typography>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" gutterBottom align="center" color="primary">
-                Olasılık Dağılımı
-              </Typography>
-              <ResponsiveContainer width="100%" height={300}>
-                <PieChart>
-                  <Pie
-                    data={pieData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    paddingAngle={5}
-                    dataKey="value"
-                    label={({ name, value }) => `${name}: ${(value * 100).toFixed(2)}%`}
-                  >
-                    {pieData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
-                  <Legend />
-                </PieChart>
-              </ResponsiveContainer>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" gutterBottom align="center" color="primary">
-                Karşılaştırmalı Analiz
-              </Typography>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart
-                  data={barData}
-                  margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-                >
-                  {Object.keys(result.all_probabilities).map((key, index) => (
-                    <Bar key={key} dataKey={key} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                  <Tooltip formatter={(value) => `${(value * 100).toFixed(2)}%`} />
-                  <Legend />
-                </BarChart>
-              </ResponsiveContainer>
-            </Grid>
-
-            <Grid item xs={12}>
-              <Alert severity={result.prediction === 'Normal' ? "success" : "warning"} sx={{ mt: 2 }}>
-                <Typography variant="body1">
-                  {result.prediction === 'Normal' 
-                    ? "Görüntüde Alzheimer belirtisi tespit edilmedi. Ancak düzenli kontrolleri ihmal etmeyin."
-                    : `Görüntüde ${result.prediction.toLowerCase()} düzeyde Alzheimer belirtisi tespit edildi. Lütfen bir sağlık kuruluşuna başvurun.`
-                  }
-                </Typography>
-              </Alert>
-            </Grid>
-          </Grid>
-        </Box>
-      );
-    }
+    return <AnalysisResults result={result} type={selectedTab === 0 ? 'tumor' : 'alzheimer'} />;
   };
 
   const handleSettingChange = (setting) => (event, newValue) => {
@@ -701,6 +530,197 @@ function App() {
     `,
     transition: 'all 0.3s ease'
   });
+
+  // Risk seviyesi belirleme fonksiyonları
+  const getRiskLevel = (tumorProbability) => {
+    if (tumorProbability >= 0.7) {
+      return {
+        severity: 'error',
+        title: 'Yüksek Risk',
+        description: 'Görüntüde yüksek olasılıkla tümör belirtisi tespit edildi.',
+        factors: [
+          'Belirgin kitle görünümü',
+          'Düzensiz sınırlar',
+          'Kontrast tutulumu',
+          'Ödem varlığı'
+        ]
+      };
+    } else if (tumorProbability >= 0.4) {
+      return {
+        severity: 'warning',
+        title: 'Orta Risk',
+        description: 'Görüntüde şüpheli bulgular mevcut.',
+        factors: [
+          'Belirsiz kitle görünümü',
+          'Düzensiz doku yapısı',
+          'Minimal ödem'
+        ]
+      };
+    } else {
+      return {
+        severity: 'success',
+        title: 'Düşük Risk',
+        description: 'Görüntüde belirgin bir risk faktörü tespit edilmedi.',
+        factors: [
+          'Normal doku yapısı',
+          'Düzenli sınırlar',
+          'Ödem bulgusu yok'
+        ]
+      };
+    }
+  };
+
+  const getAlzheimerRiskLevel = (prediction) => {
+    const riskLevels = {
+      'Normal': {
+        severity: 'success',
+        title: 'Normal Bulgular',
+        description: 'Alzheimer belirtisi tespit edilmedi.',
+        findings: [
+          'Normal beyin hacmi',
+          'Düzenli kortikal yapı',
+          'Normal ventrikül boyutları'
+        ]
+      },
+      'Çok Hafif': {
+        severity: 'info',
+        title: 'Çok Hafif Derecede Bulgular',
+        description: 'Minimal düzeyde Alzheimer bulguları mevcut.',
+        findings: [
+          'Minimal hacim kaybı',
+          'Hafif kortikal incelme',
+          'Normal sınırlarda ventrikül boyutları'
+        ]
+      },
+      'Hafif': {
+        severity: 'warning',
+        title: 'Hafif Derecede Bulgular',
+        description: 'Hafif düzeyde Alzheimer bulguları tespit edildi.',
+        findings: [
+          'Orta derecede hacim kaybı',
+          'Belirgin kortikal incelme',
+          'Hafif ventrikül genişlemesi'
+        ]
+      },
+      'Orta': {
+        severity: 'error',
+        title: 'Orta Derecede Bulgular',
+        description: 'Belirgin Alzheimer bulguları tespit edildi.',
+        findings: [
+          'Belirgin hacim kaybı',
+          'İleri kortikal incelme',
+          'Belirgin ventrikül genişlemesi'
+        ]
+      }
+    };
+    return riskLevels[prediction] || riskLevels['Normal'];
+  };
+
+  // Öneriler oluşturma fonksiyonları
+  const getTumorRecommendations = (riskLevel) => {
+    const baseRecommendations = [
+      {
+        icon: <LocalHospitalIcon color="primary" />,
+        title: 'Uzman Görüşü',
+        description: 'Nöroşirurji uzmanına başvurun'
+      },
+      {
+        icon: <AssignmentIcon color="primary" />,
+        title: 'İleri Tetkik',
+        description: 'Kontrastlı MR görüntüleme önerilir'
+      }
+    ];
+
+    if (riskLevel.severity === 'error') {
+      return [
+        ...baseRecommendations,
+        {
+          icon: <PriorityHighIcon color="error" />,
+          title: 'Acil Değerlendirme',
+          description: 'En kısa sürede uzman değerlendirmesi gerekli'
+        }
+      ];
+    }
+
+    return baseRecommendations;
+  };
+
+  const getAlzheimerRecommendations = (riskLevel) => {
+    const baseRecommendations = [
+      {
+        icon: <LocalHospitalIcon color="primary" />,
+        title: 'Nöroloji Konsültasyonu',
+        description: 'Nöroloji uzmanı değerlendirmesi önerilir'
+      },
+      {
+        icon: <TimelineIcon color="primary" />,
+        title: 'Düzenli Takip',
+        description: 'Periyodik kontrol ve değerlendirme'
+      }
+    ];
+
+    if (riskLevel.severity === 'error' || riskLevel.severity === 'warning') {
+      return [
+        ...baseRecommendations,
+        {
+          icon: <FitnessCenterIcon color="primary" />,
+          title: 'Kognitif Egzersizler',
+          description: 'Zihinsel aktivitelerin artırılması önerilir'
+        },
+        {
+          icon: <GroupIcon color="primary" />,
+          title: 'Aile Desteği',
+          description: 'Aile üyelerinin bilgilendirilmesi ve destek sağlanması'
+        }
+      ];
+    }
+
+    return baseRecommendations;
+  };
+
+  // Otomatik rapor oluşturma fonksiyonları
+  const generateTumorReport = (result) => {
+    const probability = result.all_probabilities?.tumor || 0;
+    const confidence = result.confidence || 0;
+
+    if (result.has_tumor) {
+      return `Yapılan analiz sonucunda, görüntüde ${(probability * 100).toFixed(2)}% olasılıkla tümör bulgusu tespit edilmiştir. 
+      Bu tespit ${(confidence * 100).toFixed(2)}% güven oranıyla yapılmıştır. 
+      Bulgular, detaylı inceleme ve ileri tetkik gerektirmektedir. 
+      Görüntüde tespit edilen anormallikler, lokalizasyon ve karakteristik özellikleri bakımından değerlendirilmelidir.`;
+    } else {
+      return `Yapılan analiz sonucunda, görüntüde belirgin bir tümör bulgusu tespit edilmemiştir. 
+      Normal bulgular ${((1 - probability) * 100).toFixed(2)}% olasılıkla değerlendirilmiştir. 
+      Bu değerlendirme ${(confidence * 100).toFixed(2)}% güven oranıyla yapılmıştır. 
+      Düzenli kontroller önerilmektedir.`;
+    }
+  };
+
+  const generateAlzheimerReport = (result) => {
+    const prediction = result.prediction;
+    const confidence = result.confidence || 0;
+
+    const reports = {
+      'Normal': `Yapılan analiz sonucunda, görüntüde Alzheimer hastalığına ait belirgin bir bulgu tespit edilmemiştir. 
+      Bu değerlendirme ${(confidence * 100).toFixed(2)}% güven oranıyla yapılmıştır. 
+      Beyin yapıları normal sınırlarda değerlendirilmiştir.`,
+      
+      'Çok Hafif': `Yapılan analiz sonucunda, görüntüde çok hafif düzeyde Alzheimer bulguları tespit edilmiştir. 
+      Bu değerlendirme ${(confidence * 100).toFixed(2)}% güven oranıyla yapılmıştır. 
+      Minimal düzeyde yapısal değişiklikler gözlenmiştir.`,
+      
+      'Hafif': `Yapılan analiz sonucunda, görüntüde hafif düzeyde Alzheimer bulguları tespit edilmiştir. 
+      Bu değerlendirme ${(confidence * 100).toFixed(2)}% güven oranıyla yapılmıştır. 
+      Beyin yapılarında hafif düzeyde değişiklikler ve atrofi bulguları gözlenmiştir.`,
+      
+      'Orta': `Yapılan analiz sonucunda, görüntüde orta düzeyde Alzheimer bulguları tespit edilmiştir. 
+      Bu değerlendirme ${(confidence * 100).toFixed(2)}% güven oranıyla yapılmıştır. 
+      Beyin yapılarında belirgin değişiklikler ve atrofi bulguları gözlenmiştir. 
+      Acil nörolojik değerlendirme önerilmektedir.`
+    };
+
+    return reports[prediction] || reports['Normal'];
+  };
 
   return (
     <>
